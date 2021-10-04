@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/src/ContosoCrafts.WebSite.csproj": {}
+  },
+  "projects": {
+    "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/src/ContosoCrafts.WebSite.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/src/ContosoCrafts.WebSite.csproj",
+        "projectName": "ContosoCrafts.WebSite",
+        "projectPath": "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/src/ContosoCrafts.WebSite.csproj",
+        "packagesPath": "/Users/yuzhong/.nuget/packages/",
+        "outputPath": "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/src/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/src/NuGet.Config",
+          "/Users/yuzhong/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {},
+          "https://grpc.jfrog.io/grpc/api/nuget/v3/grpc-nuget-dev": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "targetAlias": "netcoreapp3.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "targetAlias": "netcoreapp3.0",
+          "dependencies": {
+            "Microsoft.Azure.SignalR": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
