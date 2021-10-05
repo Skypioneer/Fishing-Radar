@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H2IrRiyFj2ATomO9S3eDQ1eBjKcchuNXAPw4fek99S6oXpth67lZPCH1JnSJ0C5Wo1LazU73RVpVcY3oAnUgZA==",
+  "dgSpecHash": "kQYKhtOuNct96Szc6mlPbW+11qjiBDxo1vNpTMt2r1K7AoXbUsHeFYT0Lo4AUbM8NurY8OwMGnQHk4MKhig6rQ==",
   "success": true,
-  "projectFilePath": "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/UnitTests/UnitTests.csproj",
+  "projectFilePath": "/Users/yuzhong/Desktop/CS5110FishingRadar/CS5110--Team-Sushi/UnitTests/UnitTests.csproj",
   "expectedPackageFiles": [
     "/Users/yuzhong/.nuget/packages/microsoft.codecoverage/16.5.0/microsoft.codecoverage.16.5.0.nupkg.sha512",
     "/Users/yuzhong/.nuget/packages/microsoft.csharp/4.0.1/microsoft.csharp.4.0.1.nupkg.sha512",

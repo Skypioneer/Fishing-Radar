@@ -4628,11 +4628,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/UnitTests/UnitTests.csproj",
+      "projectUniqueName": "/Users/yuzhong/Desktop/CS5110FishingRadar/CS5110--Team-Sushi/UnitTests/UnitTests.csproj",
       "projectName": "UnitTests",
-      "projectPath": "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/UnitTests/UnitTests.csproj",
+      "projectPath": "/Users/yuzhong/Desktop/CS5110FishingRadar/CS5110--Team-Sushi/UnitTests/UnitTests.csproj",
       "packagesPath": "/Users/yuzhong/.nuget/packages/",
-      "outputPath": "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/UnitTests/obj/",
+      "outputPath": "/Users/yuzhong/Desktop/CS5110FishingRadar/CS5110--Team-Sushi/UnitTests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/yuzhong/.config/NuGet/NuGet.Config"

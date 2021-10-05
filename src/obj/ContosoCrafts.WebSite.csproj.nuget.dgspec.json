@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/src/ContosoCrafts.WebSite.csproj": {}
+    "/Users/yuzhong/Desktop/CS5110FishingRadar/CS5110--Team-Sushi/src/ContosoCrafts.WebSite.csproj": {}
   },
   "projects": {
-    "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/src/ContosoCrafts.WebSite.csproj": {
+    "/Users/yuzhong/Desktop/CS5110FishingRadar/CS5110--Team-Sushi/src/ContosoCrafts.WebSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/src/ContosoCrafts.WebSite.csproj",
+        "projectUniqueName": "/Users/yuzhong/Desktop/CS5110FishingRadar/CS5110--Team-Sushi/src/ContosoCrafts.WebSite.csproj",
         "projectName": "ContosoCrafts.WebSite",
-        "projectPath": "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/src/ContosoCrafts.WebSite.csproj",
+        "projectPath": "/Users/yuzhong/Desktop/CS5110FishingRadar/CS5110--Team-Sushi/src/ContosoCrafts.WebSite.csproj",
         "packagesPath": "/Users/yuzhong/.nuget/packages/",
-        "outputPath": "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/src/obj/",
+        "outputPath": "/Users/yuzhong/Desktop/CS5110FishingRadar/CS5110--Team-Sushi/src/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/yuzhong/Documents/GitHub/CPSC5110.FQ21.ContosoCrafts/src/NuGet.Config",
+          "/Users/yuzhong/Desktop/CS5110FishingRadar/CS5110--Team-Sushi/src/NuGet.Config",
           "/Users/yuzhong/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
