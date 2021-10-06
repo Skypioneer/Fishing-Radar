@@ -11,6 +11,7 @@ namespace ContosoCrafts.WebSite.Pages
     /// <summary>
     /// Yu Zhong 
     /// Francis Kogge
+    /// Mark Taylor
     /// </summary>
     public class IndexModel : PageModel
     {
