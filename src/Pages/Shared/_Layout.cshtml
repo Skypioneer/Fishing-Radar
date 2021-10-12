@@ -3,21 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Contoso Crafts</title>
+    <title>@ViewData["Title"] - Fish Radar</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 </head>
+
+
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-navbar border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Contoso Crafts</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Fishing Radar</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
@@ -28,18 +31,51 @@
                         </li>
                     </ul>
                 </div>
+
             </div>
         </nav>
     </header>
+
+
+    <!--SIDE NAV BAR-->
+    <nav class="">
+        <div id="sidebar-wrapper">
+            <a id="menu-toggle" href="#menu-toggle" class="btn btn-secondary">三</a>
+            <ul class="sidebar-nav" style="margin-top:15px;">
+                <li class="sidebar-brand">
+                    <a asp-page="/Index" class="navbar-brand">Home</a>
+                </li>
+                <li>
+                    <a asp-page="/About" class="navbar-brand">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--
+
+        <script>
+        $(document).ready(function () {
+            $("#menu-toggle").click(function (e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        });
+    </script>
+    -->
+
+    <!--   MAIN BODY HERE   -->
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
+
+    <!--FOOTER-->
     <footer class="border-top footer text-muted bg-footer">
         <div class="container">
-            &copy; 2019 - ContosoCrafts.WebSite - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2021 - FishRadar - Team Sushi - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
 
