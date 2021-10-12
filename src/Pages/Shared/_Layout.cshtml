@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+    <script src ="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 
 
@@ -37,32 +39,18 @@
     </header>
 
 
-    <!--SIDE NAV BAR-->
-    <nav class="">
-        <div id="sidebar-wrapper">
-            <a id="menu-toggle" href="#menu-toggle" class="btn btn-secondary">三</a>
-            <ul class="sidebar-nav" style="margin-top:15px;">
-                <li class="sidebar-brand">
-                    <a asp-page="/Index" class="navbar-brand">Home</a>
-                </li>
-                <li>
-                    <a asp-page="/About" class="navbar-brand">About</a>
-                </li>
+    <!--Different nav bar-->
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+                <li><a href="#"><i class="fas fa-project-diagram"></i>Stats</a></li>
+                <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li>
             </ul>
         </div>
-    </nav>
-
-    <!--
-
-        <script>
-        $(document).ready(function () {
-            $("#menu-toggle").click(function (e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-        });
-    </script>
-    -->
+    </div>
 
     <!--   MAIN BODY HERE   -->
     <div class="container">
