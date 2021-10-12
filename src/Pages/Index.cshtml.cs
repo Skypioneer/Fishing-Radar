@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
-
+//merge-conflict
 namespace ContosoCrafts.WebSite.Pages
 {
     /// <summary>
