@@ -2,10 +2,16 @@
 @using ContosoCrafts.WebSite.Components
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "FishingRadar";
 }
 
-<h1>Team Sushi</h1>
+<h1>FishingRadar</h1>
+
+<button type="button" onclick="alert('Lake Washington\nAngle Lake\nLake Union\nHaller Lake\nLake Crescent\nLake Boren\nGreen Lake')">Discover fishing locations!</button>
+
+@*Share button to upload an image *@
+
+<button type="button" onclick="alert('Open Pop up to share an image')">Share</button>
 
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 
