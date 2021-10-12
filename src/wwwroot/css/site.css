@@ -1,10 +1,77 @@
-﻿.checked {
+﻿@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+/*CSS for side nav bar--------------------*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #f3f5f9;
+}
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+/*background block for sidebar*/
+.wrapper .sidebar{
+  width: 200px;
+  height: 100%;
+  background: #4b4276;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+/*Sidebar header css*/
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*Sidebar link element spacing css*/
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/*Sidebar link element color css*/
+.wrapper .sidebar ul li a{
+  color: #bdb8d7;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+/*highlight when hoovered over*/
+.wrapper .sidebar ul li:hover{
+  background-color: #594f8d;
+}
+/*color of when you hover over element*/    
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+
+.checked {
   color: orange;
 }
 
 .fa-star {
   cursor: pointer;
 }
+/*CSS for side nav bar------------------------------*/
+
 
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
@@ -147,28 +214,3 @@ ul {
 body {
     background-color: lightyellow;
 }
-
-/*Side nav bar css I think its broken*/
-
-/*
-#wrapper #sidebar-wrapper {
-    width: 50px;
-}
-
-#wrapper .sidebar-nav {
-    display: none;
-}
-
-#wrapper.toggled .sidebar-nav {
-    display: block;
-}
-
-a#menu-toggle {
-    display: inline-block;
-    width: 100%;
-    line-height: 100%;
-    padding: 0;
-    margin: 0;
-    color: dodgerblue;
-}
-*/
