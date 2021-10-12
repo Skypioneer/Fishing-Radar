@@ -143,6 +143,32 @@ ul {
     background: -moz-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
     background: linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
 }
+
 body {
     background-color: lightyellow;
 }
+
+/*Side nav bar css I think its broken*/
+
+/*
+#wrapper #sidebar-wrapper {
+    width: 50px;
+}
+
+#wrapper .sidebar-nav {
+    display: none;
+}
+
+#wrapper.toggled .sidebar-nav {
+    display: block;
+}
+
+a#menu-toggle {
+    display: inline-block;
+    width: 100%;
+    line-height: 100%;
+    padding: 0;
+    margin: 0;
+    color: dodgerblue;
+}
+*/
