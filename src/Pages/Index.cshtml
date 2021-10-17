@@ -12,6 +12,39 @@
 @*Share button to upload an image *@
 <button type="button" onclick="alert('Open Pop up to share an image')">Share</button>
 
+@* Image gallery prototype*@
+<body>
+    <div class="image-gallery">
+        <div class="image-box">
+            <img src="https://user-images.githubusercontent.com/30267616/137609378-76b31690-3ca8-40ae-b4b3-f74b7bada2ea.jpg" alt="penguin.jpg">
+            <div class="overlay">
+                <div class="details">
+                    <h3 class="title">
+                        <a href="#">Title Here</a>
+                    </h3>
+                    <span class="category">
+                        <a href="#">Category</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="https://user-images.githubusercontent.com/30267616/137609424-ed9abc2f-f915-47d3-a5cd-3b108425c490.jpg" alt="riverMonster_1.jpg">
+            <div class="overlay">
+                <div class="details">
+                    <h3 class="title">
+                        <a href="#">Title Here</a>
+                    </h3>
+                    <span class="category">
+                        <a href="#">Category</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
 
 <script src="_framework/blazor.server.js"></script>
