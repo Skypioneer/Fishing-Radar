@@ -32,9 +32,6 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/About">About</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                     </ul>
@@ -51,6 +48,7 @@
             <h2>Sidebar</h2>
             <ul>
                 <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+                <li><a asp-area="" asp-page="/About"><i class="fas fa-info-circle"></i>About</a></li>
                 <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
                 <li><a href="#"><i class="fas fa-project-diagram"></i>Stats</a></li>
                 <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li>
