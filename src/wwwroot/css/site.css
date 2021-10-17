@@ -70,7 +70,34 @@ body{
 .fa-star {
   cursor: pointer;
 }
-/*CSS for side nav bar------------------------------*/
+/*^^^^^^ ----CSS for side nav bar------------------------------*/
+
+/*------- CSS for image gallery layout ---------------*/
+.image-gallery {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    grid-gap: 20px;
+}
+
+.image-gallery .image-box {
+    position: relative;
+    background-color: #d7d7d8;
+    overflow: hidden;
+}
+
+.image-gallery .image-box:nth-child(7n+1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/*------- CSS for image gallery layout ---------------*/
+
 
 
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
