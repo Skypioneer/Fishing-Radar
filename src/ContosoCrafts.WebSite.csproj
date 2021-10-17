@@ -11,4 +11,7 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Logo.png" />
+  </ItemGroup>
 </Project>
