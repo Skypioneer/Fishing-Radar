@@ -193,12 +193,27 @@ body{
     }
 }
 
-
-
-
-
 /*------- CSS for image gallery layout ---------------*/
 
+/*CSS for image upload button*/
+input[type="file"]{
+    display: none;
+}
+label{
+    color: white;
+    height: 60px;
+    background-color: orange;
+    position: absolute;
+    margin: auto;
+    bottom: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*CSS for image upload button*/
 
 
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
