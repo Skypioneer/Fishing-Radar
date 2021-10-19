@@ -7,8 +7,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ContosoCrafts.WebSite.Pages
 {
+    /// <summary>
+    /// User profile page.
+    /// </summary>
     public class ProfileModel : PageModel
     {
+        /// <summary>
+        /// REST Get request.
+        /// </summary>
         public void OnGet()
         {
         }
