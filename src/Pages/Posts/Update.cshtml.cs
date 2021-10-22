@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 
-namespace ContosoCrafts.WebSite.Pages.Product
+namespace ContosoCrafts.WebSite.Pages.Posts
 {
     /// <summary>
     /// Manage the Update of the data for a single record
