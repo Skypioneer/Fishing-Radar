@@ -1,27 +1,24 @@
 using System.Linq;
 
-using Microsoft.Extensions.Logging;
-
-using Moq;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 using NUnit.Framework;
 
-using ContosoCrafts.WebSite.Pages;
+using ContosoCrafts.WebSite.Pages.Posts;
 
-namespace UnitTests.Pages.Index
+namespace UnitTests.Pages.Product.Index
 {
     public class IndexTests
     {
         #region TestSetup
+        public static PageContext pageContext;
 
         public static IndexModel pageModel;
 
         [SetUp]
         public void TestInitialize()
         {
-            var MockLoggerDirect = Mock.Of<ILogger<IndexModel>>();
-
-            pageModel = new IndexModel(MockLoggerDirect, PageTestsHelper.ProductService)
+            pageModel = new IndexModel(PageTestsHelper.ProductService)
             {
             };
         }
