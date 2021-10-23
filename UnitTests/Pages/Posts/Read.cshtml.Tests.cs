@@ -18,5 +18,20 @@ namespace UnitTests.Pages.Posts.Read
         }
 
         #endregion TestSetup
+
+        #region OnGet
+        [Test]
+        public void OnGet_Valid_Should_Return_Products()
+        {
+            // Arrange
+
+            // Act
+            pageModel.OnGet("jenlooper-cactus");
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual("The Quantified Cactus: An Easy Plant Soil Moisture Sensor", pageModel.Product.Title);
+        }
+        #endregion OnGet
     }
 }
