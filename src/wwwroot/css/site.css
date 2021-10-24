@@ -206,6 +206,7 @@ label{
     position: absolute;
     margin: auto;
     bottom: 50px;
+    left: 450px;
     font-size: 20px;
     display: flex;
     justify-content: center;

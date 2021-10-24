@@ -8,11 +8,18 @@ using Microsoft.Extensions.Logging;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
-    public class myPostsModel : PageModel
+    public class MyPostsModel : PageModel
     {
-        private readonly ILogger<myPostsModel> _logger;
 
-        public myPostsModel(ILogger<myPostsModel> logger)
+
+        /// <summary>
+        /// Defualt Construtor
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="productService"></param>
+        private readonly ILogger<MyPostsModel> _logger;
+
+        public MyPostsModel(ILogger<MyPostsModel> logger)
         {
             _logger = logger;
         }

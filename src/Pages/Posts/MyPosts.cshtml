@@ -1,5 +1,5 @@
 ﻿@page
-@model ContosoCrafts.WebSite.Pages.Product.myPostsModel
+@model ContosoCrafts.WebSite.Pages.Product.MyPostsModel
 @{
 }
 
@@ -8,10 +8,12 @@
           rel="stylesheet">
 </head>
 
+@*Header for the page*@
 <h1>Image Gallery Test</h1>
 
 @* Image gallery prototype*@
 <body>
+    @*Placeholder for a user post, just uploads from Github Issue*@
     <div class="image-gallery">
         <div class="image-box">
             <img src="https://user-images.githubusercontent.com/30267616/137609378-76b31690-3ca8-40ae-b4b3-f74b7bada2ea.jpg" alt="penguin.jpg">
@@ -27,6 +29,7 @@
             </div>
         </div>
 
+        @*Placeholder for a user post, just uploads from Github Issue*@
         <div class="image-box">
             <img src="https://user-images.githubusercontent.com/30267616/137609424-ed9abc2f-f915-47d3-a5cd-3b108425c490.jpg" alt="riverMonster_1.jpg">
             <div class="overlay">
@@ -41,6 +44,7 @@
             </div>
         </div>
 
+        @*Placeholder for a user post, just uploads from Github Issue*@
         <div class="image-box">
             <img src="https://user-images.githubusercontent.com/30267616/137609424-ed9abc2f-f915-47d3-a5cd-3b108425c490.jpg" alt="riverMonster_1.jpg">
             <div class="overlay">
@@ -55,6 +59,7 @@
             </div>
         </div>
 
+        @*Placeholder for a user post, just uploads from Github Issue*@
         <div class="image-box">
             <img src="https://user-images.githubusercontent.com/30267616/137609424-ed9abc2f-f915-47d3-a5cd-3b108425c490.jpg" alt="riverMonster_1.jpg">
             <div class="overlay">
@@ -71,14 +76,23 @@
 
     </div>
 
-
-    <input type="file", id="file" accept="image/*">
+    @*Placeholder button to take a user image input file, and upload 
+        it to the page. Currently just takes the input and 
+        nothing is done with the input.*@
+    <input type="file" , id="file" accept="image/*">
     <label for="file">
         <span class="material-icons">
             add_photo_alternate
         </span> &nbsp;
-        Upload Image 
+        Upload Image
     </label>
+
+
+    @*Create link that adds new products to the home page/index page*@
+    <div class="container">
+        <a asp-page="Create" class="btn btn-link">Upload</a>
+    </div>
+
 
 
 </body>
