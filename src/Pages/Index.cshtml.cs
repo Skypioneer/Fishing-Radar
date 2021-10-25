@@ -5,10 +5,11 @@ using Microsoft.Extensions.Logging;
 
 using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
-//change-mark
+
 namespace ContosoCrafts.WebSite.Pages
 {
     /// <summary>
+    /// Index page (home page of the website)
     /// Yu Zhong 
     /// Francis Kogge
     /// Mark Taylor
@@ -16,8 +17,14 @@ namespace ContosoCrafts.WebSite.Pages
     /// </summary>
     public class IndexModel : PageModel
     {
+        // Performs logging
         private readonly ILogger<IndexModel> _logger;
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="productService"></param>
         public IndexModel(ILogger<IndexModel> logger,
             JsonFileProductService productService)
         {
@@ -25,9 +32,14 @@ namespace ContosoCrafts.WebSite.Pages
             ProductService = productService;
         }
 
+        // Helper field for performing actions on and getting the products list
         public JsonFileProductService ProductService { get; }
+        // List of all products
         public IEnumerable<ProductModel> Products { get; private set; }
 
+        /// <summary>
+        /// REST Get request
+        /// </summary>
         public void OnGet()
         {
             Products = ProductService.GetProducts();
