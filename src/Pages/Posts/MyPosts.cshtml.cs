@@ -11,10 +11,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
     public class MyPostsModel : PageModel
     {
 
-        /// <summary>
-        /// Defualt Construtor
-        /// </summary>
-        private JsonFileProductService productService;
+        public JsonFileProductService productService;
 
         public MyPostsModel(JsonFileProductService productService)
         {
