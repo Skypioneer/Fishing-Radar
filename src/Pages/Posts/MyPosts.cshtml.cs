@@ -10,9 +10,13 @@ namespace ContosoCrafts.WebSite.Pages.Product
 {
     public class MyPostsModel : PageModel
     {
-
+        // Will act as data middleware
         public JsonFileProductService productService;
 
+        /// <summary>
+        /// Default Constructor for the MyPosts page
+        /// </summary>
+        /// <param name="productService"></param>
         public MyPostsModel(JsonFileProductService productService)
         {
             this.productService = productService;
