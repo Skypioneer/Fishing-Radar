@@ -2,30 +2,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
     public class MyPostsModel : PageModel
     {
 
-
         /// <summary>
         /// Defualt Construtor
         /// </summary>
-        /// <param name="logger"></param>
-        /// <param name="productService"></param>
-        private readonly ILogger<MyPostsModel> _logger;
+        private JsonFileProductService productService;
 
-        public MyPostsModel(ILogger<MyPostsModel> logger)
+        public MyPostsModel(JsonFileProductService productService)
         {
-            _logger = logger;
-        }
-
-        public void OnGet()
-        {
+            this.productService = productService;
         }
     }
 }
