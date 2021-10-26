@@ -37,27 +37,35 @@
 
 
     <!--Sidebar Nav Bar-->
+    <div class="row">
 
-    <div class="wrapper">
-        <div class="sidebar">
-            <h2>Sidebar</h2>
-            <ul>
-                <li><a asp-area="" asp-page="/Index"><i class="fas fa-home"></i>Home</a></li>
-                <li><a asp-area="" asp-page="/About"><i class="fas fa-info-circle"></i>About</a></li>
-                <li><a asp-area="" asp-page="/Profile"><i class="fas fa-user"></i>Profile</a></li>
-                <li><a asp-area="" asp-page="/Stats"><i class="fas fa-project-diagram"></i>Stats</a></li>
-                <li><a asp-area="" asp-page="/Map"><i class="fas fa-map-pin"></i>Map</a></li>
-                <li><a asp-area="" asp-page="/Posts/Index"><i class="fas fa-image"></i>View Posts</a></li>
-                <li><a asp-area="" asp-page="/Posts/MyPosts"><i class="fas fa-image"></i>My Posts</a></li>
-            </ul>
+        <div class="col">
+            <div class="wrapper">
+                <div class="sidebar">
+                    <h2>Sidebar</h2>
+                    <ul>
+                        <li><a asp-area="" asp-page="/Index"><i class="fas fa-home"></i>Home</a></li>
+                        <li><a asp-area="" asp-page="/About"><i class="fas fa-info-circle"></i>About</a></li>
+                        <li><a asp-area="" asp-page="/Profile"><i class="fas fa-user"></i>Profile</a></li>
+                        <li><a asp-area="" asp-page="/Stats"><i class="fas fa-project-diagram"></i>Stats</a></li>
+                        <li><a asp-area="" asp-page="/Map"><i class="fas fa-map-pin"></i>Map</a></li>
+                        <li><a asp-area="" asp-page="/Posts/Index"><i class="fas fa-image"></i>View Posts</a></li>
+                        <li><a asp-area="" asp-page="/Posts/MyPosts"><i class="fas fa-image"></i>My Posts</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!--   MAIN BODY HERE   -->
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        <!--   MAIN BODY HERE   -->
+        <div class="col">
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+
+
     </div>
 
 
