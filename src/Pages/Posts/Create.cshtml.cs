@@ -19,11 +19,10 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <summary>
         /// Defualt Construtor
         /// </summary>
-        /// <param name="productService">
-        ///     Acts as a mock database where we can pull data from
-        /// </param>
+        /// <param name="productService"> </param>
         public CreateModel(JsonFileProductService productService)
         {
+            // Product service acts as a mock database to pull data from
             ProductService = productService;
         }
 
