@@ -50,5 +50,21 @@ namespace UnitTests.Pages.Posts.MyPosts
 
         #endregion TestSetup
 
+        #region OnGet
+        [Test]
+        public void OnGet_Valid_Request_Should_Return_True()
+        {
+            // Arrange
+
+            // Act
+            pageModel.OnGet();
+            // Reset
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+        }
+
+        #endregion OnGet
+
     }
 }
