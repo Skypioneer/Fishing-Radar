@@ -8,7 +8,8 @@ using ContosoCrafts.WebSite.Services;
 namespace ContosoCrafts.WebSite.Pages.Product
 {
     /// <summary>
-    /// Create Page
+    /// Create Page model class is responsible
+    /// for the creation of new cards (content) on our site
     /// </summary>
     public class CreateModel : PageModel
     {
@@ -18,14 +19,15 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// <summary>
         /// Defualt Construtor
         /// </summary>
-        /// <param name="logger"></param>
-        /// <param name="productService"></param>
+        /// <param name="productService">
+        ///     Acts as a mock database where we can pull data from
+        /// </param>
         public CreateModel(JsonFileProductService productService)
         {
             ProductService = productService;
         }
 
-        // The data to show
+        //ProductModel object for data creation
         public ProductModel Product;
 
         /// <summary>
@@ -36,7 +38,8 @@ namespace ContosoCrafts.WebSite.Pages.Product
         {
             Product = ProductService.CreateData();
 
-            // Redirect the webpage to the Update page populated with the data so the user can fill in the fields
+            // Redirect the webpage to the Update page populated with
+            // the data so the user can fill in required fields
             return RedirectToPage("./Update", new { Id = Product.Id });
         }
     }
