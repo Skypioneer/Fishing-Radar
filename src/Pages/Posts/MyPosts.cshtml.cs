@@ -21,5 +21,14 @@ namespace ContosoCrafts.WebSite.Pages.Product
         {
             this.productService = productService;
         }
+
+        /// <summary>
+        /// When the page has data it will be retrieved in this
+        /// function. Currently there is retrieveable data on this page.
+        /// </summary>
+        public void OnGet()
+        {
+
+        }
     }
 }
