@@ -4,6 +4,9 @@ using System.Text.Json.Serialization;
 
 namespace ContosoCrafts.WebSite.Models
 {
+    /// <summary>
+    /// Data representation model class for a product.
+    /// </summary>
     public class ProductModel
     {
         //Get/Set product ID
