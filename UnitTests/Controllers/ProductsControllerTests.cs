@@ -31,11 +31,11 @@ namespace UnitTests.Controllers
             // Arrange
 
             // Act
-            var data = productsController.Get();
+            var result = productsController.Get();
 
             // Assert
             Assert.AreEqual(true, productsController.ModelState.IsValid);
-            Assert.AreEqual(true, data.Any());
+            Assert.AreEqual(true, result.Any());
         }
     }
 }
