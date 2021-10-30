@@ -25,5 +25,17 @@ namespace UnitTests.Controllers
         }
         #endregion TestSetup
 
+        [Test]
+        public void Get_Valid_Should_Return_Products()
+        {
+            // Arrange
+
+            // Act
+            var data = productsController.Get();
+
+            // Assert
+            Assert.AreEqual(true, productsController.ModelState.IsValid);
+            Assert.AreEqual(true, PageTestsHelper.ProductService.GetProducts().Any());
+        }
     }
 }
