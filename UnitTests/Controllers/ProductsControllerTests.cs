@@ -19,8 +19,12 @@ namespace UnitTests.Controllers
     class ProductsControllerTests
     {
         #region TestSetup
+        // The ProductsController instance to test on
         public static ProductsController productsController;
 
+        /// <summary>
+        /// Initialize the ProductsController for testing
+        /// </summary>
         [SetUp]
         public void TestInitiailize()
         {
@@ -28,6 +32,10 @@ namespace UnitTests.Controllers
         }
         #endregion TestSetup
 
+        /// <summary>
+        /// Get request should return a list of products. Ensures the model state of the ProductsController
+        /// is valid and that there are elements present in the returned list.
+        /// </summary>
         [Test]
         public void Get_Valid_Should_Return_Products()
         {
@@ -41,6 +49,10 @@ namespace UnitTests.Controllers
             Assert.AreEqual(true, result.ToList().Any());
         }
 
+        /// <summary>
+        /// Patch request should return an Ok result. Ensures the returned OkResult is a valid 
+        /// OkResult instance by verifying against another OkResult's ToString and StatusCode.
+        /// </summary>
         [Test]
         public void Patch_Valid_Should_Return_Ok_Result()
         {
