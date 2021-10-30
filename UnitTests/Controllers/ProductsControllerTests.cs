@@ -35,7 +35,7 @@ namespace UnitTests.Controllers
 
             // Assert
             Assert.AreEqual(true, productsController.ModelState.IsValid);
-            Assert.AreEqual(true, result.Any());
+            Assert.AreEqual(true, result.ToList().Any());
         }
     }
 }
