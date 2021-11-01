@@ -256,6 +256,16 @@ for details on configuring this project to bundle and minify static web assets. 
     background: #fbfafd;
 }
 
+
+/*NAV BAR NEW 10/31*/
+
+.topNav {
+
+    background: #fafafaf2;
+    top: 0;
+    position: sticky;
+}
+
 /* Fishing Radar Banner name css*/
 a.navbar-brand {
     white-space: normal;
