@@ -4,6 +4,10 @@ using NUnit.Framework;
 
 namespace UnitTests
 {
+    /// <summary>
+    /// A helper setup class for Unit tests
+    /// helps grab necessary data before tests and clean up after tests
+    /// </summary>
     [SetUpFixture]
     public class TestFixture
     {
@@ -13,6 +17,11 @@ namespace UnitTests
         // Path to the data folder for the content
         public static string DataContentRootPath = "./data/";
 
+        /// <summary>
+        /// Before running the unit tests, it deletes old data file folder
+        /// Then make a new one for the unit tests
+        /// Then copy the original data over to the new folder for preparing unit tests
+        /// </summary>
         [OneTimeSetUp]
         public void RunBeforeAnyTests()
         {
@@ -51,6 +60,9 @@ namespace UnitTests
             }
         }
 
+        /// <summary>
+        /// clean up after the tests, currently no need because we have copy of the original data and just delete it after use.
+        /// </summary>
         [OneTimeTearDown]
         public void RunAfterAnyTests()
         {
