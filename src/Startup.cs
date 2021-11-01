@@ -7,8 +7,16 @@ using Microsoft.Extensions.Hosting;
 
 namespace ContosoCrafts.WebSite
 {
+    /// <summary>
+    /// The main web application with configuration
+    /// gets used in program.cs to start up the web application
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// default constructor with a configuration parameter
+        /// </summary>
+        /// <param name="configuration">configuration of the web application</param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,6 +37,7 @@ namespace ContosoCrafts.WebSite
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //check for the host condition, rule out the exception first 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
