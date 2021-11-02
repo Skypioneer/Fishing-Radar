@@ -8,13 +8,16 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ContosoCrafts.WebSite.Pages.Product
 {
+    /// <summary>
+    /// Set productService and return data back
+    /// </summary>
     public class MyPostsModel : PageModel
     {
         // Will act as data middleware
         public JsonFileProductService productService;
 
         /// <summary>
-        /// Default Constructor for the MyPosts page
+        /// Default Constructor for the MyPostsModel page
         /// </summary>
         /// <param name="productService"></param>
         public MyPostsModel(JsonFileProductService productService)
