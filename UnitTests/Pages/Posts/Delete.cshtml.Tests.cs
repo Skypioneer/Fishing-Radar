@@ -9,11 +9,17 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Pages.Product.Delete
 {
+    /// <summary>
+    /// Testing the DeleteModel class for the delete function of CRUDI.
+    /// </summary>
     public class DeleteTests
     {
         #region TestSetup
         public static DeleteModel pageModel;
 
+        /// <summary>
+        /// 
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -24,6 +30,10 @@ namespace UnitTests.Pages.Product.Delete
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Testing OnGet function with a valid Product ID
+        /// The model state should then be valid and the title should be matched accordingly
+        /// </summary>
         #region OnGet
         [Test]
         public void OnGet_Valid_Should_Return_Products()
@@ -61,6 +71,10 @@ namespace UnitTests.Pages.Product.Delete
             Assert.AreEqual(null, PageTestsHelper.ProductService.GetAllData().FirstOrDefault(m => m.Id.Equals(pageModel.Product.Id)));
         }
 
+        /// <summary>
+        /// Testing OnPost function with a valid input of a new product info
+        /// The model state should then be valid and the Page should be returned to index page
+        /// </summary>
         [Test]
         public void OnPost_InValid_Model_NotValid_Return_Page()
         {
