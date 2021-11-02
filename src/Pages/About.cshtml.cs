@@ -4,7 +4,8 @@ using Microsoft.Extensions.Logging;
 namespace ContosoCrafts.WebSite.Pages
 {
     /// <summary>
-    /// AboutModel class to handle about page 
+    /// ABOUT Page that discribes what the webiste is and the background of the
+    /// development team
     /// </summary>
     public class AboutModel : PageModel
     {
