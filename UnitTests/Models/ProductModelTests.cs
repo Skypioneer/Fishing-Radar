@@ -27,5 +27,34 @@ namespace UnitTests.Models
             
         }
         #endregion TestSetup
+
+        /// <summary>
+        /// ToString should return a serialized Json string. Checks if the ProductModel
+        /// instance's ToString matches the test data instance's ToStrin after manually
+        /// setting each field.
+        /// </summary>
+        [Test]
+        public void ToString_Valid_Should_Return_Serialized_Json_String()
+        {
+            // Arrange
+            var data = new ProductModel();
+            {
+                data.Id = productModel.Id;
+                data.Maker = productModel.Maker;
+                data.Image = productModel.Image;
+                data.Url = productModel.Url;
+                data.Title = productModel.Title;
+                data.Description = productModel.Description;
+                data.Ratings = productModel.Ratings;
+                data.Quantity = productModel.Quantity;
+                data.Price = productModel.Price;
+            }
+
+            // Act
+            var result = data.ToString();
+
+            // Assert
+            Assert.AreEqual(productModel.ToString(), result);
+        }
     }
 }
