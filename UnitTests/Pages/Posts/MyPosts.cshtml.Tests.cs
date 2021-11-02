@@ -31,9 +31,11 @@ using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests.Pages.Posts.MyPosts
 {
+    /// <summary>
+    /// Testing the MyPostsModel class for setting the productService
+    /// </summary>
     public class MyPostsTest
     {
-
         #region TestSetup
         public static MyPostsModel pageModel;
 
@@ -50,6 +52,10 @@ namespace UnitTests.Pages.Posts.MyPosts
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Testing OnGet function with valid Product ID
+        /// The model state should then be valid
+        /// </summary>
         #region OnGet
         [Test]
         public void OnGet_Valid_Request_Should_Return_True()
