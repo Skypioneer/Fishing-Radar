@@ -53,7 +53,7 @@ namespace UnitTests.Pages.Posts.MyPosts
         #endregion TestSetup
 
         /// <summary>
-        /// Testing OnGet function with valid Product ID
+        /// Testing OnGet function with return data if thereis retrieveable data
         /// The model state should then be valid
         /// </summary>
         #region OnGet
