@@ -21,6 +21,9 @@ namespace UnitTests.Pages.Privacy
 {
     public class PrivacyTests
     {
+        /// <summary>
+        /// Testing the PricacyModel class for setting logger function
+        /// </summary>
         #region TestSetup
         public static IUrlHelperFactory urlHelperFactory;
         public static DefaultHttpContext httpContextDefault;
@@ -34,6 +37,9 @@ namespace UnitTests.Pages.Privacy
 
         public static PrivacyModel pageModel;
 
+        /// <summary>
+        /// Initialize a PrivacyModel for testing
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -77,6 +83,10 @@ namespace UnitTests.Pages.Privacy
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Testing OnGet function with REST Get request
+        /// The model state should then be valid
+        /// </summary>
         #region OnGet
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
