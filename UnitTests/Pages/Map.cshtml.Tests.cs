@@ -31,9 +31,11 @@ using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests.Pages
 {
+    /// <summary>
+    /// Testing the MapModel class for showing embeded map
+    /// </summary>
     public class MapTest
     {
-
         #region TestSetup
         public static MapModel pageModel;
 
@@ -50,6 +52,10 @@ namespace UnitTests.Pages
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Testing OnGet function for REST Get request
+        /// The model state should then be valid 
+        /// </summary>
         #region OnGet
         [Test]
         public void OnGet_Valid_Request_Should_Return_True()
