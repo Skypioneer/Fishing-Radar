@@ -19,6 +19,9 @@ using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests.Pages.Error
 {
+    /// <summary>
+    /// Testing the ErrorModel class for setting logger function
+    /// </summary>
     public class ErrorTests
     {
         #region TestSetup
@@ -34,6 +37,9 @@ namespace UnitTests.Pages.Error
 
         public static ErrorModel pageModel;
 
+        /// <summary>
+        /// Initialize a UpdateModel for testing
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
@@ -77,6 +83,10 @@ namespace UnitTests.Pages.Error
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Testing OnGet function with the requestID from the current activity ID
+        /// The model state should then be valid and the Id and RequestId should be matched accordingly
+        /// </summary>
         #region OnGet
         [Test]
         public void OnGet_Valid_Activity_Set_Should_Return_RequestId()
