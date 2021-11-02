@@ -31,6 +31,9 @@ using ContosoCrafts.WebSite.Services;
 
 namespace UnitTests.Pages
 {
+    /// <summary>
+    /// Testing the AboutModel class for setting logger function
+    /// </summary>
     public class AboutTest
     {
 
@@ -52,6 +55,10 @@ namespace UnitTests.Pages
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Testing OnGet function with REST Get request
+        /// The model state should then be valid 
+        /// </summary>
         #region OnGet
         [Test]
         public void OnGet_Valid_Request_Should_Return_True()
