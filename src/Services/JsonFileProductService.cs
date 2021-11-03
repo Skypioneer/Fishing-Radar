@@ -9,20 +9,33 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
+    /// <summary>
+    /// JsonFileProductService processes all CRUDi
+    /// related implementation involved with our Json file (pseudo database)
+    /// </summary>
    public class JsonFileProductService
     {
+        
+        // constructor for a web host object that is responsible for the startup and
+        // lifetime management
         public JsonFileProductService(IWebHostEnvironment webHostEnvironment)
         {
             WebHostEnvironment = webHostEnvironment;
         }
 
+        // defining webhost object
         public IWebHostEnvironment WebHostEnvironment { get; }
 
+        // returns path adding the data and products.json to path
         private string JsonFileName
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
         }
 
+        /// <summary>
+        /// Using ProductModel deserialize Json file and returns all the
+        /// products in given Json file
+        /// </summary>
         public IEnumerable<ProductModel> GetProducts()
         {
             using(var jsonFileReader = File.OpenText(JsonFileName))
@@ -35,6 +48,10 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
+        /// <summary>
+        /// Using ProductModel deserialize Json file and returns all the
+        /// products in given Json file
+        /// </summary>
         public IEnumerable<ProductModel> GetAllData()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
@@ -47,14 +64,23 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
+        /// <summary>
+        /// For a given product Id assign the given rating to that particuluar 
+        /// product in our JsonFile. 
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <param name="rating"></param>
         public void AddRating(string productId, int rating)
         {
+            //gets all of the products from Jsonfile
             var products = GetProducts();
 
+            //check to product Id if it has no ratings array initialize one
             if(products.First(x => x.Id == productId).Ratings == null)
             {
                 products.First(x => x.Id == productId).Ratings = new int[] { rating };
             }
+            // otherwise add rating to products rating array
             else
             {
                 var ratings = products.First(x => x.Id == productId).Ratings.ToList();
@@ -62,6 +88,7 @@ namespace ContosoCrafts.WebSite.Services
                 products.First(x => x.Id == productId).Ratings = ratings.ToArray();
             }
 
+            //Write the new data to Jsonfile to save changes
             using(var outputStream = File.OpenWrite(JsonFileName))
             {
                 JsonSerializer.Serialize<IEnumerable<ProductModel>>(
@@ -84,7 +111,12 @@ namespace ContosoCrafts.WebSite.Services
         /// <param name="data"></param>
         public ProductModel UpdateData(ProductModel data)
         {
+            //TODO: remove getalldata and getproducts() they do the same thing
+
+            // Get all the products from Json file
             var products = GetAllData();
+            
+            // gets the product from data if it exists if it doesn't return null
             var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
             if (productData == null)
             {
@@ -100,6 +132,7 @@ namespace ContosoCrafts.WebSite.Services
             productData.Quantity = data.Quantity;
             productData.Price = data.Price;
 
+            // save changes to Json file
             SaveData(products);
 
             return productData;
@@ -110,7 +143,7 @@ namespace ContosoCrafts.WebSite.Services
         /// </summary>
         private void SaveData(IEnumerable<ProductModel> products)
         {
-
+            // write changes to Json file
             using (var outputStream = File.Create(JsonFileName))
             {
                 JsonSerializer.Serialize<IEnumerable<ProductModel>>(
@@ -131,6 +164,7 @@ namespace ContosoCrafts.WebSite.Services
         /// <returns></returns>
         public ProductModel CreateData()
         {
+            // create a new product element and assign initial values
             var data = new ProductModel()
             {
                 Id = System.Guid.NewGuid().ToString(),
@@ -157,10 +191,14 @@ namespace ContosoCrafts.WebSite.Services
         {
             // Get the current set, and append the new record to it
             var dataSet = GetAllData();
+
+            //find the product with the same ID
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
 
+            //get the new dataset excluding the element to be removed
             var newDataSet = GetAllData().Where(m => m.Id.Equals(id) == false);
 
+            // save changes to dataset
             SaveData(newDataSet);
 
             return data;
