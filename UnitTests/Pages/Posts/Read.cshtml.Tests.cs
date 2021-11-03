@@ -26,11 +26,11 @@ namespace UnitTests.Pages.Posts.Read
             // Arrange
 
             // Act
-            pageModel.OnGet("jenlooper-cactus");
+            pageModel.OnGet("Shark");
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual("The Quantified Cactus: An Easy Plant Soil Moisture Sensor", pageModel.Product.Title);
+            Assert.AreEqual("How to handle shark if you catch them", pageModel.Product.Title);
         }
         #endregion OnGet
     }
