@@ -59,7 +59,7 @@ namespace UnitTests.Controllers
             // Arrange
             var data = new ProductsController.RatingRequest
             {
-                ProductId = "jenlooper-cactus",
+                ProductId = "Shark",
                 Rating = 5
             };
 
