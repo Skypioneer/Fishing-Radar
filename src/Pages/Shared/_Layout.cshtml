@@ -26,12 +26,13 @@
         #navbar {
             position: fixed;
             display: block;
-            transition: top 0.5s;
+            transition: top 0.3s;
         }
     </style>
 
     <!--setting the scrolling Navbar-->
-    <script>var prevScrollpos = window.pageYOffset;
+    <script>
+        var prevScrollpos = window.pageYOffset;
         window.onscroll = function () {
             var currentScrollPos = window.pageYOffset;
 
@@ -44,7 +45,8 @@
                 document.getElementById("navbar").style.top = "-185px";
             }
             prevScrollpos = currentScrollPos;
-        }</script>
+        }
+    </script>
 </head>
 
 
