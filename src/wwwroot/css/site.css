@@ -200,7 +200,7 @@ body{
 input[type="file"]{
     display: none;
 }
-label{
+.upload-img-btn {
     color: white;
     height: 60px;
     background-color: orange;
