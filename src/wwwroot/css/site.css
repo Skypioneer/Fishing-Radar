@@ -10,8 +10,11 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
-body{
-   background-color: #f3f5f9;
+body {
+    background-image: url("/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 185px;
 }
 
 .wrapper{
