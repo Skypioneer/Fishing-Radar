@@ -265,10 +265,12 @@ for details on configuring this project to bundle and minify static web assets. 
     height: 200px;
     z-index: 1000;
     position: relative;
-    position: sticky;
+/*    position: sticky;*/
     background: #6495ED;
     border-top: 1px solid rgba(255,255,255,.2);
     border-bottom: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    opacity: 0.8;
 }
 .topNav ul {
     display: flex;
@@ -398,6 +400,8 @@ ul {
     white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
     font-family: 'Nunito', sans-serif;
+    background: #6495ED;
+    opacity: 0.8;
 }
 /*Backgrounds*/
 .bg-navbar {
@@ -408,9 +412,9 @@ ul {
     opacity: 0.8;
 }
 .bg-footer {
-    background: -webkit-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
+/*    background: -webkit-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
     background: -o-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
     background: -moz-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
     background: linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
-    opacity: 0.8;
+    opacity: 0.8;*/
 }
