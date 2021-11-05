@@ -27,6 +27,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         }
 
         //ProductModel object for data creation
+        [BindProperty]
         public ProductModel Product { get; set; }
 
         /// <summary>
