@@ -27,7 +27,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         }
 
         //ProductModel object for data creation
-        public ProductModel Product;
+        public ProductModel Product { get; set; }
 
         /// <summary>
         /// REST Get request
