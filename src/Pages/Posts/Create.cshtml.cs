@@ -33,13 +33,9 @@ namespace ContosoCrafts.WebSite.Pages.Product
         /// REST Get request
         /// </summary>
         /// <param name="id"></param>
-        public IActionResult OnGet()
+        public void OnGet()
         {
             Product = ProductService.CreateData();
-
-            // Redirect the webpage to the Update page populated with
-            // the data so the user can fill in required fields
-            return RedirectToPage("./Update", new { Id = Product.Id });
         }
     }
 }
