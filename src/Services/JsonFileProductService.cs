@@ -38,7 +38,7 @@ namespace ContosoCrafts.WebSite.Services
         /// </summary>
          
 
-        ///REMOVE Redundant???
+        ///REMOVE Redundant: leave just in case unforseen error. Unit tests all passed???
         public IEnumerable<ProductModel> GetProducts()
         {
             using(var jsonFileReader = File.OpenText(JsonFileName))
