@@ -479,6 +479,10 @@ ul {
     overflow: hidden;
 }
 
+.section:target {
+    height: auto;
+}
+
 .name {
     display: block;
     margin-bottom: 30px;
