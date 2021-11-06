@@ -26,7 +26,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
             ProductService = productService;
         }
 
-        //ProductModel object for data creation
+        // ProductModel object for data creation
         [BindProperty]
         public ProductModel Product { get; set; }
 
@@ -68,7 +68,11 @@ namespace ContosoCrafts.WebSite.Pages.Product
             {
                 return Page();
             }
+
+            // Create and save the data to the JSON dataset
             ProductService.CreateData(Product);
+
+            // After saving data, go back to the home page
             return RedirectToPage("../Index");
         }
     }
