@@ -36,25 +36,6 @@ namespace ContosoCrafts.WebSite.Services
         /// Using ProductModel deserialize Json file and returns all the
         /// products in given Json file
         /// </summary>
-         
-
-        ///REMOVE Redundant: leave just in case unforseen error. Unit tests all passed???
-        public IEnumerable<ProductModel> GetProducts()
-        {
-            using(var jsonFileReader = File.OpenText(JsonFileName))
-            {
-                return JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    });
-            }
-        }
-
-        /// <summary>
-        /// Using ProductModel deserialize Json file and returns all the
-        /// products in given Json file
-        /// </summary>
         public IEnumerable<ProductModel> GetAllData()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
