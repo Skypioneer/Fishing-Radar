@@ -268,7 +268,6 @@ for details on configuring this project to bundle and minify static web assets. 
     height: 120px;
     z-index: 1000;
     position: relative;
-/*  position: sticky;*/
     background: #6495ED;
     border-top: 1px solid rgba(255,255,255,.2);
     border-bottom: 1px solid rgba(255,255,255,.2);
@@ -277,7 +276,7 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 .topNav ul {
     display: flex;
-    padding: 0 0px;
+    padding: 75px 0 0px;
     float: right;
 }
 
