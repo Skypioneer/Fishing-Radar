@@ -31,12 +31,29 @@ namespace ContosoCrafts.WebSite.Pages.Product
         public ProductModel Product { get; set; }
 
         /// <summary>
+        /// Creates a new ProductModel data that can be added to
+        /// JSON data set.
+        /// </summary>
+        /// <returns>ProductModel instance</returns>
+        public ProductModel CreateData()
+        {
+            return new ProductModel()
+            {
+                Id = System.Guid.NewGuid().ToString(),
+                Title = "Enter Title",
+                Description = "Enter Description",
+                Url = "Enter URL",
+                Image = "",
+            };
+        }
+
+        /// <summary>
         /// REST Get request
         /// </summary>
         /// <param name="id"></param>
         public void OnGet()
         {
-            Product = ProductService.CreateData();
+            Product = CreateData();
         }
     }
 }
