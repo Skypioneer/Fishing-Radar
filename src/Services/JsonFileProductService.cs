@@ -36,6 +36,9 @@ namespace ContosoCrafts.WebSite.Services
         /// Using ProductModel deserialize Json file and returns all the
         /// products in given Json file
         /// </summary>
+         
+
+        ///REMOVE Redundant???
         public IEnumerable<ProductModel> GetProducts()
         {
             using(var jsonFileReader = File.OpenText(JsonFileName))
@@ -73,7 +76,7 @@ namespace ContosoCrafts.WebSite.Services
         public void AddRating(string productId, int rating)
         {
             //gets all of the products from Jsonfile
-            var products = GetProducts();
+            var products = GetAllData();
 
             //check to product Id if it has no ratings array initialize one
             if(products.First(x => x.Id == productId).Ratings == null)
