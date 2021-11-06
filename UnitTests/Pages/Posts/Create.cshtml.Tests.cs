@@ -41,6 +41,7 @@ namespace UnitTests.Pages.Product.Create
 
             // Act
             pageModel.OnGet();
+            pageModel.OnPost();
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
