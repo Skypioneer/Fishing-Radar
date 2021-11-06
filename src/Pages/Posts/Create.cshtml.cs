@@ -55,5 +55,21 @@ namespace ContosoCrafts.WebSite.Pages.Product
         {
             Product = CreateData();
         }
+
+        /// <summary>
+        /// REST post request
+        /// Saves the the newly created data to the JSON dataset via
+        /// the ProductService attribute.
+        /// </summary>
+        /// <returns>Redirection to the home page</returns>
+        public IActionResult OnPost()
+        {
+            if (ModelState.IsValid == false)
+            {
+                return Page();
+            }
+            ProductService.CreateData(Product);
+            return RedirectToPage("../Index");
+        }
     }
 }
