@@ -161,19 +161,10 @@ namespace ContosoCrafts.WebSite.Services
         /// Create a new product using default values
         /// After create the user can update to set values
         /// </summary>
+        /// <param name="data">The product to add to the JSON dataset</param>
         /// <returns></returns>
-        public ProductModel CreateData()
+        public ProductModel CreateData(ProductModel data)
         {
-            // create a new product element and assign initial values
-            var data = new ProductModel()
-            {
-                Id = System.Guid.NewGuid().ToString(),
-                Title = "Enter Title",
-                Description = "Enter Description",
-                Url = "Enter URL",
-                Image = "",
-            };
-
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add
             var dataSet = GetAllData();
             dataSet = dataSet.Append(data);
