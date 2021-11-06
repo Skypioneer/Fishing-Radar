@@ -56,9 +56,9 @@ namespace UnitTests.Pages.Product.Delete
             // Arrange
 
             // First Create the product to delete
-            pageModel.Product = PageTestsHelper.ProductService.CreateData();
+            pageModel.Product = new CreateModel(PageTestsHelper.ProductService).CreateData();
             pageModel.Product.Title = "Example to Delete";
-            PageTestsHelper.ProductService.UpdateData(pageModel.Product);
+            PageTestsHelper.ProductService.CreateData(pageModel.Product);
 
             // Act
             var result = pageModel.OnPost() as RedirectToPageResult;
