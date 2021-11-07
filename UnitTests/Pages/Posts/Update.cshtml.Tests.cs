@@ -56,13 +56,17 @@ namespace UnitTests.Pages.Posts.Update
         public void OnPost_Valid_Should_Return_Products()
         {
             // Arrange
-            pageModel.Product = new ProductModel
+            pageModel.Product = new PostModel
             {
                 Id = "selinazawacki-moon",
                 Title = "title",
                 Description = "description",
                 Url = "url",
-                Image = "image"
+                Image = "image",
+                Setup = "spinner",
+                Date = "2001/09/01",
+                WaterTemp = 70,
+                Location = "GreenLake"
             };
 
             // Act
