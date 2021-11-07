@@ -33,13 +33,25 @@
           </button>
         </div>
         <div class="modal-body">
-          <div class="card">
-            <div class="card-img" style="background-image: url('@selectedProduct.Image');">
+            <div class="card">
+                <div class="card-img" style="background-image: url('@selectedProduct.Image');">
+                </div>
+                <div class="card-body">
+                    <p class="card-text" style="color:black">@selectedProduct.Description</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-text" style="color:black">Setup: @selectedProduct.Setup</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-text" style="color:black">Location: @selectedProduct.Location</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-text" style="color:black">Date: @selectedProduct.Date</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-text" style="color:black">Water Temperature: @selectedProduct.WaterTemp</p>
+                </div>
             </div>
-            <div class="card-body">
-                <p class="card-text" style="color:black">@selectedProduct.Description</p>
-            </div>
-          </div>
         </div>
         <div class="modal-footer">
           @if(voteCount == 0)
