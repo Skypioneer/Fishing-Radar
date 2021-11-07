@@ -43,5 +43,23 @@ namespace UnitTests.Services
             Assert.AreEqual(new int[] { 5 }, result.Ratings);
         }
 
+        /// <summary>
+        /// Tests if when a rating is added to a post, the rating is added to the Ratings
+        /// array, meaning it should be the last element in the array.
+        /// </summary>
+        [Test]
+        public void AddRating_Valid_Rating_Should_Be_Added_To_Ratings_Array()
+        {
+            // Arrange
+            var data = PageTestsHelper.ProductService.GetAllData().First(x => x.Id == "Lake Trout");
+
+            // Act
+            PageTestsHelper.ProductService.AddRating(data.Id, 3);
+            var result = PageTestsHelper.ProductService.GetAllData().First(x => x.Id == data.Id);
+
+            // Assert
+            Assert.AreEqual(3, result.Ratings[result.Ratings.Length - 1]);
+        }
+
     }
 }
