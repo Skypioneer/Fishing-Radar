@@ -93,7 +93,7 @@ namespace UnitTests.Services
         /// Tests if the data returned from UpdateData matches the updates we made.
         /// </summary>
         [Test]
-        public void UpdateData_Valid_Data_Exists_Should_Return_Updated_Data_From_Json()
+        public void UpdateData_Valid_Data_Exists_Should_Return_Updated_Data()
         {
             // Arrange
             var data = PageTestsHelper.ProductService.GetAllData().First(x => x.Id == "fly fishing");
