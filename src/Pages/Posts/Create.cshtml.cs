@@ -26,18 +26,18 @@ namespace ContosoCrafts.WebSite.Pages.Product
             ProductService = productService;
         }
 
-        // ProductModel object for data creation
+        //  object for data creation
         [BindProperty]
-        public ProductModel Product { get; set; }
+        public PostModel Product { get; set; }
 
         /// <summary>
         /// Creates a new ProductModel data that can be added to
         /// JSON data set.
         /// </summary>
         /// <returns>ProductModel instance</returns>
-        public ProductModel CreateData()
+        public PostModel CreateData()
         {
-            return new ProductModel()
+            return new PostModel()
             {
                 Id = System.Guid.NewGuid().ToString(),
                 Title = "Enter Title",
