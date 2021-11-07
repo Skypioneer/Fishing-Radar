@@ -493,3 +493,12 @@ ul {
 }
 
 /*END OF ABOUT PAGE CSS*/
+
+/*Text color setting*/
+.blackText{
+    color:black;
+}
+
+.blueIcon {
+    color: #0366d6;
+}
