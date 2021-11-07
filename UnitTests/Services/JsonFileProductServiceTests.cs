@@ -25,6 +25,10 @@ namespace UnitTests.Services
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Tests if when a rating is added to a product with a null Ratings array, that 
+        /// product will create a new Ratings array and add the rating.
+        /// </summary>
         [Test]
         public void AddRating_Valid_Null_Ratings_Should_Initialize_Ratings_Array()
         {
