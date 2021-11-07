@@ -28,7 +28,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
 
         // The data to show, bind to it for the post
         [BindProperty]
-        public ProductModel Product { get; set; }
+        public PostModel Product { get; set; }
 
         /// <summary>
         /// REST Get request
