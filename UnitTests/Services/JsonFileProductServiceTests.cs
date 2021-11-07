@@ -34,7 +34,7 @@ namespace UnitTests.Services
         public void AddRating_Valid_Null_Ratings_Should_Initialize_Ratings_Array()
         {
             // Arrange
-            var data = new ProductModel()
+            var data = new PostModel()
             {
                 Id = "new ID"
             };
@@ -76,7 +76,7 @@ namespace UnitTests.Services
         public void UpdateData_Invalid_Data_Does_Not_Exist_Should_Return_Null()
         {
             // Arrange
-            var data = new ProductModel()
+            var data = new PostModel()
             {
                 Id = "Id that doesn't exist"
             };
@@ -103,8 +103,10 @@ namespace UnitTests.Services
             data.Description = "new description";
             data.Url = "new URL";
             data.Image = "new image";
-            data.Quantity = "5";
-            data.Price = 5;
+            data.Setup = "spinner with top water";
+            data.WaterTemp = 70;
+            data.Location = "Green Lake";
+            data.Date = "2010/09/10";
 
             // Act
             var result = PageTestsHelper.ProductService.UpdateData(data);
