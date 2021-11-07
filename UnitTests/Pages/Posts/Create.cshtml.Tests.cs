@@ -68,6 +68,25 @@ namespace UnitTests.Pages.Product.Create
             // Assert
             Assert.AreEqual(false, pageModel.ModelState.IsValid);
         }
+
+        /// <summary>
+        /// OnPost test method: tests if newly created product is saved to the 
+        /// JSON file after calling OnPost
+        /// </summary>
+        [Test]
+        public void OnPost_Valid_Should_Save_Created_Data_To_Json()
+        {
+            // Arrange
+            pageModel.OnGet();
+            var data = pageModel.Product;
+
+            // Act
+            pageModel.OnPost();
+            var result = PageTestsHelper.ProductService.GetAllData().First(x => x.Id == data.Id);
+
+            // Assert
+            Assert.AreEqual(data.Id, result.Id);
+        }
         #endregion OnPost
     }
 }
