@@ -27,7 +27,7 @@ namespace ContosoCrafts.WebSite.Pages.Product
         }
 
         // The data to show
-        public ProductModel Product;
+        public PostModel Product;
 
         /// <summary>
         /// REST Get request
