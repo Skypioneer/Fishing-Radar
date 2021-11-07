@@ -32,7 +32,7 @@ namespace ContosoCrafts.WebSite.Controllers
         /// </summary>
         /// <returns>Enumerable collection of products</returns>
         [HttpGet]
-        public IEnumerable<ProductModel> Get()
+        public IEnumerable<PostModel> Get()
         {
             return ProductService.GetAllData();
         }
