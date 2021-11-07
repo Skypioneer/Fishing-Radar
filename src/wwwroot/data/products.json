@@ -14,8 +14,10 @@
       1,
       5
     ],
-    "Quantity": null,
-    "Price": 0
+    "Setup": "spinner with top water",
+    "Date": "2010/09/10",
+    "WaterTemp": 70,
+    "Location": "Green Lake"
   },
   {
     "Id": "Pacific Sand Dab",
@@ -25,8 +27,10 @@
     "Title": "Pacific Sand Dab at Puget Sound",
     "Description": "Best place to fish for pacific sand dab is Puget Sound. The best way is bottom fishing with small dead/live bait.",
     "Ratings": null,
-    "Quantity": null,
-    "Price": 0
+    "Setup": "spinner with top water",
+    "Date": "2010/09/10",
+    "WaterTemp": 70,
+    "Location": "Green Lake"
   },
   {
     "Id": "Steelhead Salmon",
@@ -36,8 +40,10 @@
     "Title": "Catching steelhead salmon in Hoh river ",
     "Description": "Most of the river that enters  the northwest of pacific offers good steelhead salmon. You can catch them by trolling the boat.",
     "Ratings": null,
-    "Quantity": null,
-    "Price": 0
+    "Setup": "spinner with top water",
+    "Date": "2010/09/10",
+    "WaterTemp": 70,
+    "Location": "Green Lake"
   },
   {
     "Id": "Shark",
@@ -47,8 +53,10 @@
     "Title": "How to handle shark if you catch them",
     "Description": "The best way is to remove the hook is while the shark is in the water using long-nose pliers or de-hookers. Keep your fingers and tools clear of its gill slots. ",
     "Ratings": null,
-    "Quantity": null,
-    "Price": 0
+    "Setup": "spinner with top water",
+    "Date": "2010/09/10",
+    "WaterTemp": 70,
+    "Location": "Green Lake"
   },
   {
     "Id": "Largemouth Bass",
@@ -58,8 +66,10 @@
     "Title": "Bass fishing near Seattle",
     "Description": "The best season to catch largemouth bass will be spring and summer time. You can find largemouth bass almost every lake and river in state of Washington.",
     "Ratings": null,
-    "Quantity": null,
-    "Price": 0
+    "Setup": "spinner with top water",
+    "Date": "2010/09/10",
+    "WaterTemp": 70,
+    "Location": "Green Lake"
   },
   {
     "Id": "Cutthroat Trout",
@@ -69,8 +79,10 @@
     "Title": "Trout in Lake Sammamish",
     "Description": "You can catch Cutthroat trout in Lake Sammamish, Washington.",
     "Ratings": null,
-    "Quantity": null,
-    "Price": 0
+    "Setup": "spinner with top water",
+    "Date": "2010/09/10",
+    "WaterTemp": 70,
+    "Location": "Green Lake"
   },
   {
     "Id": "Rainbow Trout",
@@ -80,8 +92,10 @@
     "Title": "Wedding ring lure to catch rainbow trout",
     "Description": "Wedding ring lure are a classic lure and can catch variety of species of fish. It is available in a plethora of sizes, shapes, colors and hook styles.",
     "Ratings": null,
-    "Quantity": null,
-    "Price": 0
+    "Setup": "spinner with top water",
+    "Date": "2010/09/10",
+    "WaterTemp": 70,
+    "Location": "Green Lake"
   },
   {
     "Id": " Rockfish",
@@ -91,8 +105,10 @@
     "Title": "Seawall project for rockfish and salmon",
     "Description": "The old Elliott bay seawall that was built in 1900s, it is preventing salmon from returning back to the river. The people are thinking to replace it will a new seawall that would allow salmon to swim back.",
     "Ratings": null,
-    "Quantity": null,
-    "Price": 0
+    "Setup": "spinner with top water",
+    "Date": "2010/09/10",
+    "WaterTemp": 70,
+    "Location": "Green Lake"
   },
   {
     "Id": "fly fishing",
@@ -102,7 +118,9 @@
     "Title": "Fly fishing in the fall to catch fish",
     "Description": "Fly fishing is another option for fishing in rivers and creeks around seattle..",
     "Ratings": null,
-    "Quantity": null,
-    "Price": 0
+    "Setup": "spinner with top water",
+    "Date": "2010/09/10",
+    "WaterTemp": 70,
+    "Location": "Green Lake"
   }
 ]
