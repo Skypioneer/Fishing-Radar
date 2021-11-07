@@ -36,11 +36,11 @@ namespace ContosoCrafts.WebSite.Services
         /// Using ProductModel deserialize Json file and returns all the
         /// products in given Json file
         /// </summary>
-        public IEnumerable<ProductModel> GetAllData()
+        public IEnumerable<PostModel> GetAllData()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
-                return JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
+                return JsonSerializer.Deserialize<PostModel[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
@@ -75,7 +75,7 @@ namespace ContosoCrafts.WebSite.Services
             //Write the new data to Jsonfile to save changes
             using(var outputStream = File.OpenWrite(JsonFileName))
             {
-                JsonSerializer.Serialize<IEnumerable<ProductModel>>(
+                JsonSerializer.Serialize<IEnumerable<PostModel>>(
                     new Utf8JsonWriter(outputStream, new JsonWriterOptions
                     {
                         SkipValidation = true,
@@ -93,44 +93,46 @@ namespace ContosoCrafts.WebSite.Services
         /// Save to the data store
         /// </summary>
         /// <param name="data"></param>
-        public ProductModel UpdateData(ProductModel data)
+        public PostModel UpdateData(PostModel data)
         {
             //TODO: remove getalldata and getproducts() they do the same thing
 
             // Get all the products from Json file
-            var products = GetAllData();
+            var posts = GetAllData();
             
             // gets the product from data if it exists if it doesn't return null
-            var productData = products.FirstOrDefault(x => x.Id.Equals(data.Id));
-            if (productData == null)
+            var postData = posts.FirstOrDefault(x => x.Id.Equals(data.Id));
+            if (postData == null)
             {
                 return null;
             }
 
             // Update the data to the new passed in values
-            productData.Title = data.Title;
-            productData.Description = data.Description.Trim();
-            productData.Url = data.Url;
-            productData.Image = data.Image;
+            postData.Title = data.Title;
+            postData.Description = data.Description.Trim();
+            postData.Url = data.Url;
+            postData.Image = data.Image;
 
-            productData.Quantity = data.Quantity;
-            productData.Price = data.Price;
+            postData.Date = data.Date;
+            postData.Setup = data.Setup;
+            postData.WaterTemp = data.WaterTemp;
+            postData.Location = data.Location;
 
             // save changes to Json file
-            SaveData(products);
+            SaveData(posts);
 
-            return productData;
+            return postData;
         }
 
         /// <summary>
         /// Save All products data to storage
         /// </summary>
-        private void SaveData(IEnumerable<ProductModel> products)
+        private void SaveData(IEnumerable<PostModel> products)
         {
             // write changes to Json file
             using (var outputStream = File.Create(JsonFileName))
             {
-                JsonSerializer.Serialize<IEnumerable<ProductModel>>(
+                JsonSerializer.Serialize<IEnumerable<PostModel>>(
                     new Utf8JsonWriter(outputStream, new JsonWriterOptions
                     {
                         SkipValidation = true,
@@ -147,7 +149,7 @@ namespace ContosoCrafts.WebSite.Services
         /// </summary>
         /// <param name="data">The product to add to the JSON dataset</param>
         /// <returns></returns>
-        public ProductModel CreateData(ProductModel data)
+        public PostModel CreateData(PostModel data)
         {
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add
             var dataSet = GetAllData();
@@ -162,7 +164,7 @@ namespace ContosoCrafts.WebSite.Services
         /// Remove the item from the system
         /// </summary>
         /// <returns></returns>
-        public ProductModel DeleteData(string id)
+        public PostModel DeleteData(string id)
         {
             // Get the current set, and append the new record to it
             var dataSet = GetAllData();
