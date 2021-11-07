@@ -10,7 +10,7 @@
         <div class="card-img" style="background-image: url('@product.Image');">
         </div>
         <div class="card-body">
-            <h5 class="card-title" style="color:black">@product.Title</h5>
+            <h5 class="card-title blackText">@product.Title</h5>
         </div>
         <div class="card-footer">
             <small class="text-muted"><button @onclick="(e => SelectProduct(product.Id))" 
@@ -27,7 +27,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="productTitle" style="color: black">@selectedProduct.Title</h5>
+          <h5 class="modal-title blackText" id="productTitle">@selectedProduct.Title</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -37,19 +37,19 @@
                 <div class="card-img" style="background-image: url('@selectedProduct.Image');">
                 </div>
                 <div class="card-body">
-                    <p class="card-text" style="color:black">@selectedProduct.Description</p>
+                    <p class="card-text blackText">@selectedProduct.Description</p>
                 </div>
                 <div class="card-body">
-                    <p class="card-text" style="color:black">Setup: @selectedProduct.Setup</p>
+                    <p class="card-text blackText">Setup: @selectedProduct.Setup</p>
                 </div>
                 <div class="card-body">
-                    <p class="card-text" style="color:black">Location: @selectedProduct.Location</p>
+                    <p class="card-text blackText">Location: @selectedProduct.Location</p>
                 </div>
                 <div class="card-body">
-                    <p class="card-text" style="color:black">Date: @selectedProduct.Date</p>
+                    <p class="card-text blackText">Date: @selectedProduct.Date</p>
                 </div>
                 <div class="card-body">
-                    <p class="card-text" style="color:black">Water Temperature: @selectedProduct.WaterTemp</p>
+                    <p class="card-text blackText">Water Temperature: @selectedProduct.WaterTemp</p>
                 </div>
             </div>
         </div>
