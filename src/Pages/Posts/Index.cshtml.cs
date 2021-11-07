@@ -25,7 +25,7 @@ namespace ContosoCrafts.WebSite.Pages.Posts
         public JsonFileProductService ProductService { get; }
 
         // Collection of the Data
-        public IEnumerable<ProductModel> Products { get; private set; }
+        public IEnumerable<PostModel> Products { get; private set; }
 
         /// <summary>
         /// REST OnGet, return all data
