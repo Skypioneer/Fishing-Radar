@@ -3,7 +3,7 @@
 using NUnit.Framework;
 
 using ContosoCrafts.WebSite.Pages.Product;
-
+using Microsoft.AspNetCore.Mvc;
 
 namespace UnitTests.Pages.Product.Create
 {
@@ -48,5 +48,26 @@ namespace UnitTests.Pages.Product.Create
             Assert.AreEqual(oldCount + 1, PageTestsHelper.ProductService.GetAllData().Count());
         }
         #endregion OnGet
+
+        #region OnPost
+        /// <summary>
+        /// Testing OnPost function with an Invalid Product ID
+        /// The model state should then be invalid
+        /// </summary>
+        [Test]
+        public void OnPost_Invalid_Page_Not_Valid_Return_Page()
+        {
+            // Arrange
+
+            // Force an invalid error state
+            pageModel.ModelState.AddModelError("bogus", "bogus error");
+
+            // Act
+            var result = pageModel.OnPost() as ActionResult;
+
+            // Assert
+            Assert.AreEqual(false, pageModel.ModelState.IsValid);
+        }
+        #endregion OnPost
     }
 }
