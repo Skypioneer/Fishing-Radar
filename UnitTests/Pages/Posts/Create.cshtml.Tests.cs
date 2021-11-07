@@ -29,23 +29,23 @@ namespace UnitTests.Pages.Product.Create
         #endregion TestSetup
 
         /// <summary>
-        /// Testing OnGet function with a valid Product ID
-        /// The model state should then be valid and the title should be matched accordingly
+        /// OnGet method test to ensure that the Product attribute in CreateModel is 
+        /// set to a new ProductModel instance by checking whether its null.
         /// </summary>
         #region OnGet
         [Test]
-        public void OnGet_Valid_Should_Return_Products()
+        public void OnGet_Valid_Set_Product_Attribute()
         {
             // Arrange
-            var oldCount = PageTestsHelper.ProductService.GetAllData().Count();
 
             // Act
+
+            // OnGet sets the Product attribute, so it should not be null at this point
             pageModel.OnGet();
-            pageModel.OnPost();
+            var result = pageModel.Product;
 
             // Assert
-            Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(oldCount + 1, PageTestsHelper.ProductService.GetAllData().Count());
+            Assert.AreEqual(false, result == null);
         }
         #endregion OnGet
 
