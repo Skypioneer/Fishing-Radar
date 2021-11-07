@@ -88,5 +88,30 @@ namespace UnitTests.Services
             Assert.AreEqual(null, result);
         }
 
+        /// <summary>
+        /// UpdateData test method
+        /// Tests if the data returned from UpdateData matches the updates we made.
+        /// </summary>
+        [Test]
+        public void UpdateData_Valid_Data_Exists_Should_Return_Updated_Data_From_Json()
+        {
+            // Arrange
+            var data = PageTestsHelper.ProductService.GetAllData().First(x => x.Id == "fly fishing");
+
+            // Change all attributes that can be updated in UpdateData
+            data.Title = "new title";
+            data.Description = "new description";
+            data.Url = "new URL";
+            data.Image = "new image";
+            data.Quantity = "5";
+            data.Price = 5;
+
+            // Act
+            var result = PageTestsHelper.ProductService.UpdateData(data);
+
+            // Assert
+            Assert.AreEqual(data.ToString(), result.ToString());
+        }
+
     }
 }
