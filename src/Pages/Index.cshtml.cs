@@ -35,7 +35,7 @@ namespace ContosoCrafts.WebSite.Pages
         // Helper field for performing actions on and getting the products list
         public JsonFileProductService ProductService { get; }
         // List of all products
-        public IEnumerable<ProductModel> Products { get; private set; }
+        public IEnumerable<PostModel> Products { get; private set; }
 
         /// <summary>
         /// REST Get request
