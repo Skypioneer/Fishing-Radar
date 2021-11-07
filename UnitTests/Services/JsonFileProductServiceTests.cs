@@ -26,6 +26,7 @@ namespace UnitTests.Services
         #endregion TestSetup
 
         /// <summary>
+        /// AddRating test method
         /// Tests if when a rating is added to a product with a null Ratings array, that 
         /// product will create a new Ratings array and add the rating.
         /// </summary>
@@ -48,6 +49,7 @@ namespace UnitTests.Services
         }
 
         /// <summary>
+        /// AddRating test method
         /// Tests if when a rating is added to a post, the rating is added to the Ratings
         /// array, meaning it should be the last element in the array.
         /// </summary>
@@ -63,6 +65,27 @@ namespace UnitTests.Services
 
             // Assert
             Assert.AreEqual(3, result.Ratings[result.Ratings.Length - 1]);
+        }
+
+        /// <summary>
+        /// UpdateData test method
+        /// Tests if when a nonexistent data is called to have its data updated, UpdateData
+        /// returns null since data doesn't exist in the JSON file.
+        /// </summary>
+        [Test]
+        public void UpdateData_Invalid_Data_Does_Not_Exist_Should_Return_Null()
+        {
+            // Arrange
+            var data = new ProductModel()
+            {
+                Id = "Id that doesn't exist"
+            };
+
+            // Act
+            var result = PageTestsHelper.ProductService.UpdateData(data);
+
+            // Assert
+            Assert.AreEqual(null, result);
         }
 
     }
