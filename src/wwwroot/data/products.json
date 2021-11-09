@@ -5,7 +5,7 @@
     "img": "https://riptidefish.com/wp-content/uploads/2018/05/green-lake-seattle-fishing-4-800x600.jpg",
     "Url": "https://riptidefish.com/green-lake-trout-fishing-in-seattle/",
     "Title": "Lake Trout from Green Lake",
-    "Description": "Best Lake to fish for lake trout around Seattle area. The best way is still fishing with power bait. ",
+    "Description": "Best Lake to fish for lake trout around Seattle area. The best way is still fishing with power bait.",
     "Ratings": [
       5,
       5,
@@ -17,7 +17,13 @@
     "Setup": "spinner with top water",
     "Date": "2010/09/10",
     "WaterTemp": 70,
-    "Location": "Green Lake"
+    "Location": "Green Lake",
+    "CommentList": [
+      {
+        "Id": "5b66bb2c-af45-41f7-8b00-d8b5d1501a16",
+        "Comment": "I love trout!"
+      }
+    ]
   },
   {
     "Id": "Pacific Sand Dab",
@@ -30,7 +36,8 @@
     "Setup": "spinner with top water",
     "Date": "2010/09/10",
     "WaterTemp": 70,
-    "Location": "Green Lake"
+    "Location": "Green Lake",
+    "CommentList": []
   },
   {
     "Id": "Steelhead Salmon",
@@ -43,12 +50,13 @@
     "Setup": "spinner with top water",
     "Date": "2010/09/10",
     "WaterTemp": 70,
-    "Location": "Green Lake"
+    "Location": "Green Lake",
+    "CommentList": []
   },
   {
     "Id": "Shark",
     "Maker": "shark",
-    "img": "https://i0.wp.com/fishgame.com/wp-content/uploads/2021/10/shark.jpg?resize=1200%2C675&ssl=1",
+    "img": "https://i0.wp.com/fishgame.com/wp-content/uploads/2021/10/shark.jpg?resize=1200%2C675\u0026ssl=1",
     "Url": "https://fishgame.com/2021/10/handling-sharks-you-catch-with-care-and-safety",
     "Title": "How to handle shark if you catch them",
     "Description": "The best way is to remove the hook is while the shark is in the water using long-nose pliers or de-hookers. Keep your fingers and tools clear of its gill slots. ",
@@ -56,7 +64,8 @@
     "Setup": "spinner with top water",
     "Date": "2010/09/10",
     "WaterTemp": 70,
-    "Location": "Green Lake"
+    "Location": "Green Lake",
+    "CommentList": []
   },
   {
     "Id": "Largemouth Bass",
@@ -69,7 +78,8 @@
     "Setup": "spinner with top water",
     "Date": "2010/09/10",
     "WaterTemp": 70,
-    "Location": "Green Lake"
+    "Location": "Green Lake",
+    "CommentList": []
   },
   {
     "Id": "Cutthroat Trout",
@@ -82,7 +92,8 @@
     "Setup": "spinner with top water",
     "Date": "2010/09/10",
     "WaterTemp": 70,
-    "Location": "Green Lake"
+    "Location": "Green Lake",
+    "CommentList": []
   },
   {
     "Id": "Rainbow Trout",
@@ -95,7 +106,8 @@
     "Setup": "spinner with top water",
     "Date": "2010/09/10",
     "WaterTemp": 70,
-    "Location": "Green Lake"
+    "Location": "Green Lake",
+    "CommentList": []
   },
   {
     "Id": " Rockfish",
@@ -108,7 +120,8 @@
     "Setup": "spinner with top water",
     "Date": "2010/09/10",
     "WaterTemp": 70,
-    "Location": "Green Lake"
+    "Location": "Green Lake",
+    "CommentList": []
   },
   {
     "Id": "fly fishing",
@@ -121,6 +134,7 @@
     "Setup": "spinner with top water",
     "Date": "2010/09/10",
     "WaterTemp": 70,
-    "Location": "Green Lake"
+    "Location": "Green Lake",
+    "CommentList": []
   }
 ]
