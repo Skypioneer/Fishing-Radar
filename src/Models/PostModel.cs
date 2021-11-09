@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -42,6 +43,9 @@ namespace ContosoCrafts.WebSite.Models
 
         //Get/set the location when the fish was caught
         public string Location { get; set; }
+
+        // Store the Comments entered by the users on this product
+        public List<CommentModel> CommentList { get; set; } = new List<CommentModel>();
 
         // Get/set ToString method to get a string representation
         public override string ToString() => JsonSerializer.Serialize<PostModel>(this);
