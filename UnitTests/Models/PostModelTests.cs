@@ -50,6 +50,7 @@ namespace UnitTests.Models
                 data.Date = postModel.Date;
                 data.WaterTemp = postModel.WaterTemp;
                 data.Location = postModel.Location;
+                data.CommentList = postModel.CommentList;
             }
 
             // Act
