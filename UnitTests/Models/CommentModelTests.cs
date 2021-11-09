@@ -11,11 +11,11 @@ namespace UnitTests.Models
     class CommentModelTests
     {
         #region TestSetup
-        // PostModel instance to test on
+        // comment model instance to test on
         public static CommentModel commentModel;
 
         /// <summary>
-        /// Initialize the PostModel for testing
+        /// Initialize the comment model for testing
         /// </summary>
         [SetUp]
         public void TestInitialize()
@@ -25,9 +25,8 @@ namespace UnitTests.Models
         #endregion TestSetup
 
         /// <summary>
-        /// ToString should return a serialized Json string. Checks if the PostModel
-        /// instance's ToString matches the test data instance's ToStrin after manually
-        /// setting each field.
+        /// ToString should return a serialized Json string. Checks if the comment model
+        /// instance's ToString matches the test data for each field
         /// </summary>
         [Test]
         public void ToString_Valid_Should_Return_Serialized_Json_String()
