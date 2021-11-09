@@ -20,7 +20,8 @@ namespace UnitTests.Models
         [SetUp]
         public void TestInitialize()
         {
-            commentModel = new CommentModel();
+            //PageTestsHelper.ProductService.GetAllData().First();
+            commentModel = PageTestsHelper.ProductService.GetAllData().First().CommentList[0];
         }
         #endregion TestSetup
 
