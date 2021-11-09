@@ -118,6 +118,9 @@ namespace ContosoCrafts.WebSite.Services
             postData.WaterTemp = data.WaterTemp;
             postData.Location = data.Location;
 
+
+            postData.CommentList = data.CommentList;
+
             // save changes to Json file
             SaveData(posts);
 
