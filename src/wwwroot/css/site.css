@@ -277,7 +277,7 @@ for details on configuring this project to bundle and minify static web assets. 
     border-top: 1px solid rgba(255,255,255,.2);
     border-bottom: 1px solid rgba(255,255,255,.2);
     border-bottom: 1px solid rgba(255,255,255,.2);
-    opacity: 0.8;
+    opacity: 1;
 }
 .topNav ul {
     display: flex;
