@@ -18,7 +18,7 @@ body {
 }
 
 .header-text {
-    color: aquamarine;
+    color: #6495ED;
 }
 
 
@@ -254,13 +254,6 @@ for details on configuring this project to bundle and minify static web assets. 
 .topNav ul li a.active {
     background: #1E90FF;
 }
-/*
-    CAUSES WEIRD FORMATTING ISSUE
-.topNav ul li a {
-    color: #fff;
-    padding: 20px;
-}
-*/
 
 /*END OF TOP NAVBAR CSS*/
 
