@@ -17,15 +17,10 @@ body {
     margin-top: 185px;
 }
 
+header-text {
 
-/*highlight when hoovered over*/
-.wrapper .sidebar ul li:hover{
-  background-color: #594f8d;
 }
-/*color of when you hover over element*/    
-.wrapper .sidebar ul li:hover a{
-  color: #fff;
-}
+
 
 .checked {
   color: orange;
