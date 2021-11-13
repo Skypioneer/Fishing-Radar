@@ -466,6 +466,8 @@ ul {
 
 .ps a img {
     width: 150%;
+    background-position: center center;
+    background-repeat: no-repeat;
     filter: grayscale(100%);
     transition: 0.4s all;
 }
