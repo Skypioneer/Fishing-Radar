@@ -17,19 +17,10 @@ body {
     margin-top: 185px;
 }
 
-header-text {
-
+.header-text {
+    color: aquamarine;
 }
 
-
-.checked {
-  color: orange;
-}
-
-.fa-star {
-  cursor: pointer;
-}
-/*^^^^^^ ----CSS for side nav bar------------------------------*/
 
 /*------- CSS for image gallery layout ---------------*/
 .image-gallery {
