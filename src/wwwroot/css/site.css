@@ -21,6 +21,14 @@ body {
     color: #6495ED;
 }
 
+/*Text color settings*/
+.black-text {
+    color: black;
+}
+
+.white-text {
+    color: white;
+}
 
 /*------- CSS for image gallery layout ---------------*/
 .image-gallery {
@@ -442,8 +450,3 @@ ul {
 }
 
 /*END OF ABOUT PAGE CSS*/
-
-/*Text color setting*/
-.black-text{
-    color:black;
-}
