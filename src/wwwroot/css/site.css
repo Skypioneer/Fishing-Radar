@@ -465,7 +465,7 @@ ul {
 }
 
 .ps a img {
-    width: 100%;
+    width: 150%;
     filter: grayscale(100%);
     transition: 0.4s all;
 }
