@@ -29,7 +29,54 @@ body {
 .white-text {
     color: white;
 }
+/*-----------------------SEARCH BAR CSS-----------------------*/
 
+.search-box{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height: 50px;
+    border-radius: 50px;
+    padding: 10px;
+}
+.search-box:hover > .search-text {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+    background: white;
+}
+
+.search-btn {
+    color: #e84118;
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #6495ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.search-text {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+
+/*-----------------------END OF SEARCH BAR CSS----------------*/
 /*------- CSS for image gallery layout ---------------*/
 .image-gallery {
     width: 100%;
