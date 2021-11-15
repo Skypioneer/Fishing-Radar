@@ -209,5 +209,35 @@ namespace UnitTests.Components
         }
         #endregion SubmitRating
 
+
+        #region UpdateCommentText(string)
+        [Test]
+
+        public void UpdateCommentText_New_Comment_Should_Return_Content()
+        {
+            // Arrange
+            Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
+            var id = "CommentButton_Lake Trout";
+
+            var page = RenderComponent<ProductList>();
+
+            // Find the Buttons (more info)
+            var buttonList = page.FindAll("Button");
+
+            // Find the one that matches the ID looking for and click it
+            var button = buttonList.First(m => m.OuterHtml.Contains(id));
+
+            // Act
+            button.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            // Assert
+            Assert.AreEqual(true, pageMarkup.Contains("I love trout!"));
+        }
+
+        #endregion
+
     }
 }
