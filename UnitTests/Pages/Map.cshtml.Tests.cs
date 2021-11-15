@@ -32,7 +32,7 @@ using ContosoCrafts.WebSite.Services;
 namespace UnitTests.Pages
 {
     /// <summary>
-    /// Testing the MapModel class for showing embeded map
+    /// Unit test class for Map.cshtml.cs
     /// </summary>
     public class MapTest
     {
@@ -40,12 +40,12 @@ namespace UnitTests.Pages
         public static MapModel pageModel;
 
         /// <summary>
-        /// Initialize a MapModel for testing
+        /// Initialize MapModel for testing
         /// </summary>
         [SetUp]
         public void TestInitialize()
         {
-            pageModel = new MapModel()
+            pageModel = new MapModel(PageTestsHelper.FishingSpotService)
             {
             };
         }
@@ -53,21 +53,22 @@ namespace UnitTests.Pages
         #endregion TestSetup
 
         /// <summary>
-        /// Testing OnGet function for REST Get request
-        /// The model state should then be valid 
+        /// OnGet test for REST Get request
+        /// Checks if the model state is valid and if FishingSpots is initialized
+        /// to the list of fishing spots, retrieved from the JSON database.
         /// </summary>
         #region OnGet
         [Test]
-        public void OnGet_Valid_Request_Should_Return_True()
+        public void OnGet_Valid_Request_Should_Return_Fishing_Spots()
         {
             // Arrange
 
             // Act
             pageModel.OnGet();
-            // Reset
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(true, pageModel.FishingSpots.ToList().Any());
         }
 
         #endregion OnGet
