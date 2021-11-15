@@ -497,3 +497,15 @@ ul {
 }
 
 /*END OF ABOUT PAGE CSS*/
+
+/*Upload Post Button*/
+.upload-btn {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background-color: mediumseagreen;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom:10px;
+}
+/*End of Upload Post Button*/
