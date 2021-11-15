@@ -31,5 +31,21 @@ namespace ContosoCrafts.WebSite.Services
         {
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "fishingSpot.json"); }
         }
+
+        /// <summary>
+        /// Retrieve all data from the fishing spot JSON database and returns it as an enumerable.
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<FishingSpotModel> GetAllData()
+        {
+            using (var jsonFileReader = File.OpenText(JsonFileName))
+            {
+                return JsonSerializer.Deserialize<FishingSpotModel[]>(jsonFileReader.ReadToEnd(),
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+            }
+        }
     }
 }
