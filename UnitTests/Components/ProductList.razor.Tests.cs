@@ -79,7 +79,7 @@ namespace UnitTests.Components
 
             // Arrange
             Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
-            var id = "MoreInfoButton_jenlooper-light";
+            var id = "MoreInfoButton_Shark";
 
             var page = RenderComponent<ProductList>();
 
@@ -151,7 +151,7 @@ namespace UnitTests.Components
 
             // Arrange
             Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
-            var id = "MoreInfoButton_jenlooper-cactus";
+            var id = "MoreInfoButton_Lake Trout";
 
             var page = RenderComponent<ProductList>();
 
