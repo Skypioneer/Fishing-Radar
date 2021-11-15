@@ -1,44 +1,30 @@
 [
   {
-    "Id": "lake-washington",
-    "SpotName": "Lake Washington",
-    "City": "Seattle",
-    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/lake-washington"
+    "Id": "000001",
+    "Name": "Mark Taylor",
+    "PhoneNumber": "5555555555",
+    "FishingTarget": "Shark",
+    "Price":  "100USD/Hr with gas/tackles/live bait included"
   },
   {
-    "Id": "angle-lake",
-    "SpotName": "Angle Lake",
-    "City": "SeaTac",
-    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/angle-lake"
+    "Id": "000002",
+    "Name": "Francis kogge",
+    "PhoneNumber": "6666666666",
+    "FishingTarget": "Salmon",
+    "Price": "80USD/Hr with gas/tackles/live bait included"
   },
   {
-    "Id": "lake-union",
-    "SpotName": "Lake Union",
-    "City": "Seattle",
-    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/lake-union"
+    "Id": "000003",
+    "Name": "Jason Wang",
+    "PhoneNumber": "7777777777",
+    "FishingTarget": "Trout",
+    "Price": "50USD/Hr with gas/tackles/live bait included"
   },
   {
-    "Id": "haller-lake",
-    "SpotName": "Haller Lake",
-    "City": "Seattle",
-    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/haller-lake"
-  },
-  {
-    "Id": "lake-crescent",
-    "SpotName": "Lake Crescent",
-    "City": "Port Angeles",
-    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/lake-cresent"
-  },
-  {
-    "Id": "lake-boren",
-    "SpotName": "Lake Boren",
-    "City": "Newcastle",
-    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/lake-boren"
-  },
-  {
-    "Id": "green-lake",
-    "SpotName": "Green Lake",
-    "City": "Seattle",
-    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/green-lake-king"
+    "Id": "000004",
+    "Name": "William Zhong",
+    "PhoneNumber": "8888888888",
+    "FishingTarget": "Flounder",
+    "Price": "50USD/Hr with gas/tackles/live bait/beverages included"
   }
 ]
