@@ -39,14 +39,14 @@
                 <div class="card-footer">
                     <small class="text-muted">
                         <button @onclick="(e => SelectProduct(product.Id))"
-                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                                data-toggle="modal" data-target="#productModal" id="MoreInfoButton_@product.Id" class="btn btn-primary">
                             More Info
                         </button>
                     </small>
 
                     <small class="text-muted">
                         <button @onclick="(e => SelectProduct(product.Id))"
-                                data-toggle="modal" data-target="#productCommentModel" class="btn btn-primary">
+                                data-toggle="modal" data-target="#productCommentModel" id="CommentButton_@product.Id" class="btn btn-primary">
                             Comment
                         </button>
                     </small>
