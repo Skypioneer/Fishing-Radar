@@ -405,8 +405,8 @@ ul {
     white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
     font-family: 'Nunito', sans-serif;
-    background: #6495ED;
-    opacity: 1;
+    background: #435cbb; /*#6495ED*/
+/*    opacity: 1;*/
 }
 /*Backgrounds*/
 .bg-navbar {
