@@ -1,0 +1,44 @@
+[
+  {
+    "Id": "lake-washington",
+    "SpotName": "Lake Washington",
+    "City": "Seattle",
+    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/lake-washington"
+  },
+  {
+    "Id": "angle-lake",
+    "SpotName": "Angle Lake",
+    "City": "SeaTac",
+    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/angle-lake"
+  },
+  {
+    "Id": "lake-union",
+    "SpotName": "Lake Union",
+    "City": "Seattle",
+    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/lake-union"
+  },
+  {
+    "Id": "haller-lake",
+    "SpotName": "Haller Lake",
+    "City": "Seattle",
+    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/haller-lake"
+  },
+  {
+    "Id": "lake-crescent",
+    "SpotName": "Lake Crescent",
+    "City": "Port Angeles",
+    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/lake-cresent"
+  },
+  {
+    "Id": "lake-boren",
+    "SpotName": "Lake Boren",
+    "City": "Newcastle",
+    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/lake-boren"
+  },
+  {
+    "Id": "green-lake",
+    "SpotName": "Green Lake",
+    "City": "Seattle",
+    "Url": "https://wdfw.wa.gov/fishing/locations/lowland-lakes/green-lake-king"
+  }
+]
