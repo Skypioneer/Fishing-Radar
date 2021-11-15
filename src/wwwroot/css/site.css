@@ -508,4 +508,10 @@ ul {
     display: inline-block;
     margin-bottom:10px;
 }
+
+.upload-btn:hover {
+    color: mediumseagreen;
+    background-color: white;
+    border-color: white;
+}
 /*End of Upload Post Button*/
