@@ -3,31 +3,56 @@
 @using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService ProductService
 
-<div class="card-columns">
-    @foreach (var product in ProductService.GetAllData())
-    {
-        <div class="card">
-            <div class="card-img" style="background-image: url('@product.Image');">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title black-text">@product.Title</h5>
-            </div>
-            <div class="card-footer">
-                <small class="text-muted">
-                    <button @onclick="(e => SelectProduct(product.Id))"
-                            data-toggle="modal" data-target="#productModal" class="btn btn-primary">
-                        More Info
-                    </button>
-                </small>
 
-                <small class="text-muted">
-                    <button @onclick="(e => SelectProduct(product.Id))"
-                            data-toggle="modal" data-target="#productCommentModel" class="btn btn-primary">
-                        Comment
-                    </button>
-                </small>
-            </div>
+<div class="row">
+    <div class="col">
+        <div class="search-box">
+            <input class="search-text" type="text" @onchange="(e) => UpdateFilterText(e.Value.ToString())"
+                   value="@FilterDataString" name="" placeholder="Search Posts">
+
+            <a class="search-btn" @onclick="(e => EnableFilterData())" href="#"> </a>
         </div>
+    </div>
+</div>
+
+
+<div class="card-columns">
+    @{
+
+        var productList = ProductService.GetAllData();
+
+        // If filter is enabled, reduce the data set to the filter string
+        if (FilterData)
+        {
+            productList = productList.Where(m => m.Title.Contains(FilterDataString));
+        }
+
+
+        foreach (var product in productList)
+        {
+            <div class="card">
+                <div class="card-img" style="background-image: url('@product.Image');">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title black-text">@product.Title</h5>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <button @onclick="(e => SelectProduct(product.Id))"
+                                data-toggle="modal" data-target="#productModal" class="btn btn-primary">
+                            More Info
+                        </button>
+                    </small>
+
+                    <small class="text-muted">
+                        <button @onclick="(e => SelectProduct(product.Id))"
+                                data-toggle="modal" data-target="#productCommentModel" class="btn btn-primary">
+                            Comment
+                        </button>
+                    </small>
+                </div>
+            </div>
+        }
     }
 </div>
 
@@ -242,6 +267,27 @@
 
         // Set the NewComment flag to false to hide the input box
         NewComment = false;
+    }
+
+
+    string FilterDataString = "";
+    bool FilterData = false;
+
+    void UpdateFilterText(string text)
+    {
+        FilterDataString = text;
+    }
+
+    void EnableFilterData()
+    {
+        // If the Filter is enabled, set the filter flag
+        FilterData = true;
+    }
+
+    void ClearFilterData()
+    {
+        // If the Filter is enabled, set the filter flag
+        FilterData = false;
     }
 
 }
