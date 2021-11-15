@@ -9,8 +9,35 @@
 <h3 align="center">1. Browse our favorite spots to fish!</h3>
 <br>
 <br>
+
 <div align="center">
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1CidasMCwKj785kQVDi1EZOETwwd1xa8w" width="640" height="480"></iframe>
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1CidasMCwKj785kQVDi1EZOETwwd1xa8w" width="700" height="480"></iframe>
+</div>
+
+<br />
+
+<!--Container to display all user posts-->
+<div class="container">
+    <!--Table to display all user posts.-->
+    <table class="table table-bordered table-striped white-text">
+        <thead>
+            <tr>
+                <th><i class="fas fa-water"></i> Name</th>
+                <th><i class="fas fa-map-pin"></i> City</th>
+                <th><i class="fas fa-link"></i> Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var fishingSpot in Model.FishingSpots)
+            {
+                <tr>
+                    <td>@fishingSpot.SpotName</td>
+                    <td>@fishingSpot.City</td>
+                    <td><a target="_blank" href="@fishingSpot.Url">@fishingSpot.Url</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
 
 <br>
@@ -27,6 +54,7 @@
     <button align="center" type="submit" class="btn btn-primary">Submit</button>
 </form>
 <br>
+
 <hr />
 
 <br>
