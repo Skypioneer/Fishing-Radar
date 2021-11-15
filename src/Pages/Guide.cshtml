@@ -1,0 +1,36 @@
+﻿@page
+@model ContosoCrafts.WebSite.Pages.GuideModel
+@{
+    ViewData["Title"] = "Findg Fishing Guide";
+}
+
+<h1>@ViewData["Title"]</h1>
+<br>
+<h3 align="center">Find your Fishing Guide here!</h3>
+<br>
+<br>
+
+<div class="container">
+    <!--Table to display all user posts.-->
+    <table class="table table-bordered table-striped white-text">
+        <thead>
+            <tr>
+                <th><i class="fas fa-name"></i>Name</th>
+                <th><i class="fas fa-phonenumber"></i>Phone Number</th>
+                <th><i class="fas fa-target"></i>Target Fish</th>
+                <th><i class="fas fa-price"></i>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var guide in Model.Guides)
+            {
+                <tr>
+                    <td>@guide.Name</td>
+                    <td>@guide.PhoneNumber</td>
+                    <td>@guide.FishingTarget</td>
+                    <td>@guide.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
