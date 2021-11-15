@@ -38,6 +38,8 @@ namespace UnitTests
         public static TempDataDictionary TempData;
         public static PageContext PageContext;
         public static JsonFileProductService ProductService;
+        public static JsonFileFishingSpotService FishingSpotService;
+        public static JsonFileFishingGuideService FishingGuideService;
 
         /// <summary>
         /// Default Constructor
@@ -74,6 +76,18 @@ namespace UnitTests
             JsonFileProductService productService;
 
             productService = new JsonFileProductService(PageTestsHelper.MockWebHostEnvironment.Object);
+
+            FishingSpotService = new JsonFileFishingSpotService(MockWebHostEnvironment.Object);
+
+            JsonFileFishingSpotService fishingSpotService;
+
+            fishingSpotService = new JsonFileFishingSpotService(PageTestsHelper.MockWebHostEnvironment.Object);
+
+            FishingGuideService = new JsonFileFishingGuideService(MockWebHostEnvironment.Object);
+
+            JsonFileFishingGuideService fishingGuideService;
+
+            fishingGuideService = new JsonFileFishingGuideService(PageTestsHelper.MockWebHostEnvironment.Object);
         }
     }
 }

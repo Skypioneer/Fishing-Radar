@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace ContosoCrafts.WebSite.Models
 {
@@ -21,5 +23,8 @@ namespace ContosoCrafts.WebSite.Models
 
         // Get/Set for a URL link to a website with information about the fishing spot
         public string Url { get; set; }
+
+        // Get/set ToString method to get a string representation
+        public override string ToString() => JsonSerializer.Serialize<FishingSpotModel>(this);
     }
 }

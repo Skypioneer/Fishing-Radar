@@ -10,7 +10,7 @@
 
 @*Create link that adds new products to the home page/index page*@
 <div class="container">
-    <a asp-page="/Posts/Create" class="btn btn-link btn-primary">Upload Post</a>
+    <a asp-page="/Posts/Create" class="btn btn-link btn-primary upload-btn fas fa-upload"> Upload Post</a>
 </div>
 
 @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
