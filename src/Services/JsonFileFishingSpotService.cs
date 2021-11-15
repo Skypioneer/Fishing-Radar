@@ -1,7 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Text.Json;
+
+using ContosoCrafts.WebSite.Models;
+
+using Microsoft.AspNetCore.Hosting;
 
 namespace ContosoCrafts.WebSite.Services
 {
@@ -10,5 +14,22 @@ namespace ContosoCrafts.WebSite.Services
     /// </summary>
     public class JsonFileFishingSpotService
     {
+        /// <summary>
+        /// Constructor initializes the web host environment.
+        /// </summary>
+        /// <param name="webHostEnvironment"></param>
+        public JsonFileFishingSpotService(IWebHostEnvironment webHostEnvironment)
+        {
+           WebHostEnvironment = webHostEnvironment;
+        }
+
+        // Helper for building file path
+        public IWebHostEnvironment WebHostEnvironment { get; }
+
+        // Builds JSON file path
+        private string JsonFileName
+        {
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "fishingSpot.json"); }
+        }
     }
 }
