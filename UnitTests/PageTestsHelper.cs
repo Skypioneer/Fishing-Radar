@@ -39,6 +39,7 @@ namespace UnitTests
         public static PageContext PageContext;
         public static JsonFileProductService ProductService;
         public static JsonFileFishingSpotService FishingSpotService;
+        public static JsonFileFishingGuideService FishingGuideService;
 
         /// <summary>
         /// Default Constructor
@@ -81,6 +82,12 @@ namespace UnitTests
             JsonFileFishingSpotService fishingSpotService;
 
             fishingSpotService = new JsonFileFishingSpotService(PageTestsHelper.MockWebHostEnvironment.Object);
+
+            FishingGuideService = new JsonFileFishingGuideService(MockWebHostEnvironment.Object);
+
+            JsonFileFishingGuideService fishingGuideService;
+
+            fishingGuideService = new JsonFileFishingGuideService(PageTestsHelper.MockWebHostEnvironment.Object);
         }
     }
 }
