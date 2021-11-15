@@ -32,16 +32,16 @@ namespace UnitTests.Components
             var result = page.Markup;
 
             // Assert
-            Assert.AreEqual(true, result.Contains("The Quantified Cactus: An Easy Plant Soil Moisture Sensor"));
+            Assert.AreEqual(true, result.Contains("Lake Trout from Green Lake"));
         }
 
         #region SelectProduct
         [Test]
-        public void SelectProduct_Valid_ID_jenlooper_Should_Return_Content()
+        public void SelectProduct_Valid_ID_Lake_Trout_Should_Return_Content()
         {
             // Arrange
             Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
-            var id = "MoreInfoButton_jenlooper-cactus";
+            var id = "MoreInfoButton_Lake Trout";
 
             var page = RenderComponent<ProductList>();
 
@@ -58,7 +58,7 @@ namespace UnitTests.Components
             var pageMarkup = page.Markup;
 
             // Assert
-            Assert.AreEqual(true, pageMarkup.Contains("This project is a good learning project to get comfortable with soldering and programming an Arduino."));
+            Assert.AreEqual(true, pageMarkup.Contains("Best Lake to fish for lake trout around Seattle area. The best way is still fishing with power bait."));
         }
         #endregion SelectProduct
 
