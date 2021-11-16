@@ -266,5 +266,44 @@ namespace UnitTests.Components
 
         #endregion
 
+        #region Filter
+        [Test]
+        public void Filter_Search_for_Shark_Should_Return_Content()
+        {
+            //Arrange
+            Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
+            
+            // Card Id
+            var id = "Shark";
+
+            // Search Bar Id
+            var searchId = "SearchBar";
+
+            // Filter Button
+            var filterId = "FilterButton";
+
+            var page = RenderComponent<ProductList>();
+
+            // find the text form
+            var textEntry = page.FindAll("input");
+            var textBox = textEntry.First(m => m.OuterHtml.Contains(searchId));
+            textBox.Change(id);
+
+            // find the buttons
+            var btnList = page.FindAll("a");
+            var filterBtn = btnList.First(m => m.OuterHtml.Contains(filterId));
+            // Act
+            filterBtn.Click();
+
+            // Get the markup to use for the assert
+            var pageMarkup = page.Markup;
+
+            Assert.AreEqual(true, pageMarkup.Contains("Shark"));
+            Assert.AreEqual(false, pageMarkup.Contains("Trout"));
+
+        }
+
+        #endregion
+
     }
 }
