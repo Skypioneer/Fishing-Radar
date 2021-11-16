@@ -210,7 +210,7 @@ namespace UnitTests.Components
         #endregion SubmitRating
 
 
-        #region UpdateCommentText(string)
+        #region UpdateCommentText
         [Test]
 
         public void UpdateCommentText_New_Comment_Should_Return_Content()
@@ -219,6 +219,15 @@ namespace UnitTests.Components
             Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
             var id = "CommentButton_Lake Trout";
 
+            // id of comment button
+            var addCommentId = "AddComment";
+
+            // id of save button
+            var saveCommentId = "SaveComment";
+
+            // id of text box
+            var newCommentId = "NewComment";
+
             var page = RenderComponent<ProductList>();
 
             // Find the Buttons (more info)
@@ -226,15 +235,77 @@ namespace UnitTests.Components
 
             // Find the one that matches the ID looking for and click it
             var button = buttonList.First(m => m.OuterHtml.Contains(id));
-
-            // Act
             button.Click();
 
-            // Get the markup to use for the assert
+            // Get the markup of the page post the Click action
+            var buttonMarkup = page.Markup;
+
+            // buttons on the card
+            var btnList = page.FindAll("Button");
+            // Find the one that matches the ID looking for and click it
+            var commentButton = btnList.First(m => m.OuterHtml.Contains(addCommentId));
+            commentButton.Click();
+
+            // find the save button
+            btnList = page.FindAll("Button");
+            var saveBtn = btnList.First(m => m.OuterHtml.Contains(saveCommentId));
+
+
+            // find the text form
+            var textEntry = page.FindAll("input");
+            var textBox = textEntry.First(m => m.OuterHtml.Contains(newCommentId));
+            textBox.Change("Test Comment");
+
+
+            saveBtn.Click();
+
             var pageMarkup = page.Markup;
 
+            Assert.AreEqual(true, pageMarkup.Contains("Test Comment"));
+
+
+            /*
+            //BELOW IS GARBAGE
+
+            // Get the Vote Count
+            // Get the Vote Count, the List should have 7 elements, element 2 is the string for the count
+            var preVoteCountSpan = starButtonList[1];
+            var preVoteCountString = preVoteCountSpan.OuterHtml;
+
+            // Get the First star item from the list, it should not be checked
+            var starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star"));
+
+            // Save the html for it to compare after the click
+            var preStarChange = starButton.OuterHtml;
+
+            // Act
+
+            // Click the star button
+            starButton.Click();
+
+            // Get the markup to use for the assert
+            buttonMarkup = page.Markup;
+
+            // Get the Star Buttons
+            starButtonList = page.FindAll("span");
+
+            // Get the Vote Count, the List should have 7 elements, element 2 is the string for the count
+            var postVoteCountSpan = starButtonList[1];
+            var postVoteCountString = postVoteCountSpan.OuterHtml;
+
+            // Get the Last stared item from the list
+            starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star checked"));
+
+            // Save the html for it to compare after the click
+            var postStarChange = starButton.OuterHtml;
+
             // Assert
-            Assert.AreEqual(true, pageMarkup.Contains("I love trout!"));
+
+            // Confirm that the record had no votes to start, and 1 vote after
+            Assert.AreEqual(true, preVoteCountString.Contains("Be the first to vote!"));
+            Assert.AreEqual(true, postVoteCountString.Contains("1 Vote"));
+            Assert.AreEqual(false, preVoteCountString.Equals(postVoteCountString));
+            */
         }
 
         #endregion
