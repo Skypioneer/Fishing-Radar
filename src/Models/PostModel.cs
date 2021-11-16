@@ -15,32 +15,48 @@ namespace ContosoCrafts.WebSite.Models
 
         //Get/set the maker of said product
         public string Maker { get; set; }
-        
+
+        [Required]
         [JsonPropertyName("img")]
         //Get/Set image for a product
         public string Image { get; set; }
 
+        [Required]
+        [Url]
         //Get/set URL for a product
         public string Url { get; set; }
 
+        [Required]
+        [StringLength(maximumLength: 100, MinimumLength = 1, ErrorMessage = "The Title should have a length of more than {2} and less than {1}")]
         //Get/set Title of a product
         public string Title { get; set; }
 
+        [Required]
+        [StringLength(maximumLength: 1000, MinimumLength = 1, ErrorMessage = "The Description should have a length of more than {2} and less than {1}")]
         //Get/set Description for a product
         public string Description { get; set; }
 
         // Get/set list of ratings for a producrt
         public int[] Ratings { get; set; }
 
+        [Required]
+        [StringLength(maximumLength: 100, MinimumLength = 1, ErrorMessage = "The Setup should have a length of more than {2} and less than {1}")]
         //Get/set the setup used for catching the fish
         public string Setup { get; set; }
 
+        [Required]
+        [DataType(DataType.Date)]
+        [Display(Name = "Release Date")]
         //Get/set the date when the fish was caught
         public string Date { get; set; }
 
+        [Required]
+        [Range(24.8,95)]
         //Get/set the water temperature when the fish was caught
         public int WaterTemp { get; set; }
 
+        [Required]
+        [StringLength(maximumLength: 100, MinimumLength = 1, ErrorMessage = "The Location should have a length of more than {2} and less than {1}")]
         //Get/set the location when the fish was caught
         public string Location { get; set; }
 
