@@ -7,10 +7,10 @@
 <div class="row">
     <div class="col">
         <div class="search-box">
-            <input class="search-text" type="text" @onchange="(e) => UpdateFilterText(e.Value.ToString())"
+            <input id="SearchBar" class="search-text" type="text" @onchange="(e) => UpdateFilterText(e.Value.ToString())"
                    value="@FilterDataString" name="" placeholder="Search Posts">
 
-            <a class="search-btn" @onclick="(e => EnableFilterData())" href="#"> </a>
+            <a id ="FilterButton" class="search-btn" @onclick="(e => EnableFilterData())" href="#"> </a>
         </div>
     </div>
 </div>
@@ -285,11 +285,13 @@
         FilterData = true;
     }
 
-    void ClearFilterData()
-    {
+    
+    //void ClearFilterData()
+    //{
         // If the Filter is enabled, set the filter flag
-        FilterData = false;
-    }
+    //    FilterData = false;
+    //}
+    //
 
 }
 
