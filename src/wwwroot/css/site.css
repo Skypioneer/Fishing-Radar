@@ -310,6 +310,17 @@ for details on configuring this project to bundle and minify static web assets. 
     background: #1E90FF;
 }
 
+/*links to be centered on the navigation bar for all screen resolutions*/
+.links-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); /* Older Gecko browser */
+    -ms-transform: translate(-50%, -50%); /* IE9+ */
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 /*END OF TOP NAVBAR CSS*/
 
 /* Fishing Radar Banner name css*/
