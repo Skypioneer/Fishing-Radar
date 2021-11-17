@@ -39,6 +39,7 @@ body {
     height: 50px;
     border-radius: 50px;
     padding: 10px;
+    z-index: 1000;
 }
 .search-box:hover > .search-text {
     width: 240px;
