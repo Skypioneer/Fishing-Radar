@@ -45,6 +45,23 @@ namespace UnitTests.Pages.Posts.Update
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual("Lake Trout from Green Lake", pageModel.Product.Title);
         }
+
+        /// <summary>
+        /// OnGet test method
+        /// Ppassing an invalid ID should redirect Read page to the index page
+        /// so that the website doesn't crash
+        /// </summary>
+        [Test]
+        public void OnGet_Invalid_Should_Redirect_To_Index_Page()
+        {
+            // Arrange
+
+            // Act
+            var result = pageModel.OnGet("ID that doesn't exist") as RedirectToPageResult;
+
+            // Assert
+            Assert.AreEqual("./Index", result.PageName);
+        }
         #endregion OnGet
 
         /// <summary>
