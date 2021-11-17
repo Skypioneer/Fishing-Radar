@@ -49,6 +49,27 @@ namespace UnitTests.Pages.Product.Delete
         }
         #endregion OnGet
 
+        #region OnGet Invalid
+
+        /// <summary>
+        /// OnGet test method
+        /// Ppassing an invalid ID should redirect page to the index page
+        /// so that the website doesn't crash
+        /// </summary>
+        [Test]
+        public void OnGet_Invalid_Should_Redirect_To_Index_Page()
+        {
+            // Arrange
+
+            // Act
+            var result = pageModel.OnGet("ID that doesn't exist") as RedirectToPageResult;
+
+            // Assert
+            Assert.AreEqual("./Index", result.PageName);
+        }
+
+        #endregion
+
         #region OnPost
         [Test]
         public void OnPost_Valid_Should_Return_Products()
@@ -90,5 +111,8 @@ namespace UnitTests.Pages.Product.Delete
             Assert.AreEqual(false, pageModel.ModelState.IsValid);
         }
         #endregion OnPost
+
+
+
     }
 }
