@@ -5,9 +5,14 @@ using ContosoCrafts.WebSite.Components;
 using Microsoft.Extensions.DependencyInjection;
 using ContosoCrafts.WebSite.Services;
 using System.Linq;
-
+/// <summary>
+/// Bunit tests for components on ProductList razor page
+/// </summary>
 namespace UnitTests.Components
 {
+    /// <summary>
+    /// Bunit test class for ProductLists unit tests
+    /// </summary>
     public class ProductListTests : BunitTestContext
     {
         #region TestSetup
@@ -213,8 +218,12 @@ namespace UnitTests.Components
         #region UpdateCommentText
         [Test]
 
+        /// Unit test will take a card and add a new comment by searching the page for its
+        /// buttons and then clicking them. It then creates a test comment that should be able
+        /// to be seen by the unit test.
         public void UpdateCommentText_New_Comment_Should_Return_Content()
         {
+
             // Arrange
             Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
             var id = "CommentButton_Lake Trout";
@@ -256,7 +265,7 @@ namespace UnitTests.Components
             var textBox = textEntry.First(m => m.OuterHtml.Contains(newCommentId));
             textBox.Change("Test Comment");
 
-
+            // act save the comment
             saveBtn.Click();
 
             var pageMarkup = page.Markup;
@@ -268,6 +277,11 @@ namespace UnitTests.Components
 
         #region Filter
         [Test]
+        ///
+        /// Unit test to check that we can successfully filter our cards by product ids.
+        /// Unit test should return just a single card called shark and it tries to search
+        /// for another card but can find it because it doesn't reference shark,
+        ///
         public void Filter_Search_for_Shark_Should_Return_Content()
         {
             //Arrange
