@@ -4,9 +4,9 @@
     ViewData["Title"] = "Map";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="white-text">@ViewData["Title"]</h1>
 <br>
-<h3 align="center">1. Browse our favorite spots to fish!</h3>
+<h3 align="center" class="white-text">1. Browse our favorite spots to fish!</h3>
 <br>
 <br>
 
@@ -33,7 +33,7 @@
                 <tr>
                     <td>@fishingSpot.SpotName</td>
                     <td>@fishingSpot.City</td>
-                    <td><a target="_blank" href="@fishingSpot.Url">@fishingSpot.Url</a></td>
+                    <td><a target="_blank" class="link-text" href="@fishingSpot.Url">@fishingSpot.Url</a></td>
                 </tr>
             }
         </tbody>
@@ -41,15 +41,15 @@
 </div>
 
 <br>
-<h3 align="center"><b>Any fishing spots you would like added to the map?</b></h3>
+<h3 align="center" class="white-text"><b>Any fishing spots you would like added to the map?</b></h3>
 <form align="center">
     <div align="center" class="form-group">
         <input class="form-control" placeholder="Enter Fishing Spot Name">
-        <small class="form-text text-muted">Any lake or river you enjoy fishing at!</small>
+        <small class="form-text white-text">Any lake or river you enjoy fishing at!</small>
     </div>
     <div align="center" class="form-group">
         <input class="form-control" placeholder="Enter Coordinates (optional)">
-        <small class="form-text text-muted">This will help us pinpoint the exact location!</small>
+        <small class="form-text white-text">This will help us pinpoint the exact location!</small>
     </div>
     <button align="center" type="submit" class="btn btn-primary">Submit</button>
 </form>
@@ -60,7 +60,7 @@
 <br>
 <br>
 <br>
-<h3 align="center">2. Browse the best Fishing tackle & supply store around Seattle Area</h3>
+<h3 align="center" class="white-text">2. Browse the best Fishing tackle & supply store around Seattle Area</h3>
 <br>
 <br>
 <div align="center">
