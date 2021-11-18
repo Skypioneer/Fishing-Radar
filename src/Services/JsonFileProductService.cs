@@ -86,7 +86,6 @@ namespace ContosoCrafts.WebSite.Services
             }
         }
 
-
         /// <summary>
         /// Find the data record
         /// Update the fields
@@ -117,7 +116,6 @@ namespace ContosoCrafts.WebSite.Services
             postData.Setup = data.Setup;
             postData.WaterTemp = data.WaterTemp;
             postData.Location = data.Location;
-
 
             postData.CommentList = data.CommentList;
 
@@ -183,6 +181,5 @@ namespace ContosoCrafts.WebSite.Services
 
             return data;
         }
-
     }
 }

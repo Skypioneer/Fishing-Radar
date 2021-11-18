@@ -40,9 +40,7 @@
         }</script>
 </head>
 
-
 <body>
-
     <nav id="navbar" class="topNav navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
         <div class="container no-margin">
             <img src="~/Logo.png" alt="Logo image" width="100" length="100" />
@@ -53,17 +51,6 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!--
-            <ul>
-                <li><a asp-area="" asp-page="/Index"><i class="fas fa-home blueIcon"></i>Home</a></li>
-                <li><a asp-area="" asp-page="/About"><i class="fas fa-info-circle blueIcon"></i>About</a></li>
-                <li><a asp-area="" asp-page="/Map"><i class="fas fa-map-pin blueIcon"></i>Map</a></li>
-                <li><a asp-area="" asp-page="/Posts/Index"><i class="fas fa-image blueIcon"></i>View Posts</a></li>
-                <li><a asp-area="" asp-page="/Posts/MyPosts"><i class="fas fa-image blueIcon"></i>My Posts</a></li>
-            </ul>
-            
-                -->
             
             <ul class="links-centered">
                 <li><a asp-area="" asp-page="/Index">Home</a></li>
@@ -99,4 +86,3 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
-

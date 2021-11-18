@@ -1,19 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 using ContosoCrafts.WebSite.Pages.Product;
 using ContosoCrafts.WebSite.Models;
 using System.Linq;
 
-
-using Microsoft.AspNetCore.Mvc.RazorPages;
-
-using ContosoCrafts.WebSite.Pages.Posts;
-
-
 using System.Diagnostics;
 
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -26,8 +20,7 @@ using Moq;
 
 using ContosoCrafts.WebSite.Pages;
 using ContosoCrafts.WebSite.Services;
-
-
+using ContosoCrafts.WebSite.Pages.Posts;
 
 namespace UnitTests.Pages
 {

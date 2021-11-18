@@ -3,7 +3,6 @@ using Microsoft.Extensions.Logging;
 
 namespace ContosoCrafts.WebSite.Pages
 {
-
     /// <summary>
     /// Privacy Page
     /// Page will have sites privacy policy and related information
@@ -14,7 +13,6 @@ namespace ContosoCrafts.WebSite.Pages
         //Read only logger store information of the current status of
         //the privacy page
         private readonly ILogger<PrivacyModel> _logger;
-
 
         /// <summary>
         /// Creates a logger object from of PrivacyModel class
