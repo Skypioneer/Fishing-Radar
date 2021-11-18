@@ -527,3 +527,13 @@ ul {
     border-color: white;
 }
 /*End of Upload Post Button*/
+
+/*MAP Link*/
+.link-text {
+    color: wheat;
+}
+
+.link-text:hover {
+    color: navy;
+}
+/*End of MAP Link*/
