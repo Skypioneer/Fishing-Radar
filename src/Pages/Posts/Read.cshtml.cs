@@ -15,14 +15,14 @@ namespace ContosoCrafts.WebSite.Pages.Product
     public class ReadModel : PageModel
     {
         // Data middletier
-        public JsonFileProductService ProductService { get; }
+        public JsonFileProductService<PostModel> ProductService { get; }
 
         /// <summary>
         /// Defualt Construtor
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="productService"></param>
-        public ReadModel(JsonFileProductService productService)
+        public ReadModel(JsonFileProductService<PostModel> productService)
         {
             ProductService = productService;
         }
