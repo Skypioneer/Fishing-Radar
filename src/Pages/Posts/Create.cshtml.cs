@@ -13,13 +13,13 @@ namespace ContosoCrafts.WebSite.Pages.Product
     public class CreateModel : PageModel
     {
         // Data middle tier
-        public JsonFileProductService ProductService { get; }
+        public JsonFileProductService<PostModel> ProductService { get; }
 
         /// <summary>
         /// Defualt Construtor
         /// </summary>
         /// <param name="productService"> </param>
-        public CreateModel(JsonFileProductService productService)
+        public CreateModel(JsonFileProductService<PostModel> productService)
         {
             // Product service acts as a mock database to pull data from
             ProductService = productService;
