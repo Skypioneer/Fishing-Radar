@@ -13,8 +13,8 @@ namespace ContosoCrafts.WebSite.Services
     /// JsonFileProductService processes all CRUDi
     /// related implementation involved with our Json file (pseudo database)
     /// </summary>
-   public class JsonFileProductService
-    {
+   public class JsonFileProductService<T> where T : Model, new()
+   {
         
         // constructor for a web host object that is responsible for the startup and
         // lifetime management
@@ -26,21 +26,24 @@ namespace ContosoCrafts.WebSite.Services
         // defining webhost object
         public IWebHostEnvironment WebHostEnvironment { get; }
 
+        // Helper for getting the model's corresponding JSON file name
+        private Model model = new T();
+
         // returns path adding the data and products.json to path
         private string JsonFileName
         {
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", model.GetFileName()); }
         }
 
         /// <summary>
         /// Using ProductModel deserialize Json file and returns all the
         /// products in given Json file
         /// </summary>
-        public IEnumerable<PostModel> GetAllData()
+        public IEnumerable<T> GetAllData()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
-                return JsonSerializer.Deserialize<PostModel[]>(jsonFileReader.ReadToEnd(),
+                return JsonSerializer.Deserialize<T[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
@@ -57,7 +60,7 @@ namespace ContosoCrafts.WebSite.Services
         public void AddRating(string productId, int rating)
         {
             //gets all of the products from Jsonfile
-            var products = GetAllData();
+            var products = GetAllData() as IEnumerable<PostModel>;
 
             //check to product Id if it has no ratings array initialize one
             if(products.First(x => x.Id == productId).Ratings == null)
@@ -97,7 +100,7 @@ namespace ContosoCrafts.WebSite.Services
             //TODO: remove getalldata and getproducts() they do the same thing
 
             // Get all the products from Json file
-            var posts = GetAllData();
+            var posts = GetAllData() as IEnumerable<PostModel>;
             
             // gets the product from data if it exists if it doesn't return null
             var postData = posts.FirstOrDefault(x => x.Id.Equals(data.Id));
@@ -153,7 +156,7 @@ namespace ContosoCrafts.WebSite.Services
         public PostModel CreateData(PostModel data)
         {
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add
-            var dataSet = GetAllData();
+            var dataSet = GetAllData() as IEnumerable<PostModel>;
             dataSet = dataSet.Append(data);
 
             SaveData(dataSet);
@@ -168,13 +171,14 @@ namespace ContosoCrafts.WebSite.Services
         public PostModel DeleteData(string id)
         {
             // Get the current set, and append the new record to it
-            var dataSet = GetAllData();
+            var dataSet = GetAllData() as IEnumerable<PostModel>;
 
             //find the product with the same ID
             var data = dataSet.FirstOrDefault(m => m.Id.Equals(id));
 
             //get the new dataset excluding the element to be removed
-            var newDataSet = GetAllData().Where(m => m.Id.Equals(id) == false);
+            var newDataSet = GetAllData() as IEnumerable<PostModel>;
+            newDataSet = newDataSet.Where(m => m.Id.Equals(id) == false);
 
             // save changes to dataset
             SaveData(newDataSet);
