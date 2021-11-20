@@ -14,13 +14,13 @@ namespace ContosoCrafts.WebSite.Pages
         /// Default constructor
         /// </summary>
         /// <param name="fishingGuideService"></param>
-        public GuideModel(JsonFileFishingGuideService fishingGuideService)
+        public GuideModel(JsonFileProductService<FishingGuideModel> fishingGuideService)
         {
             FishingGuideService = fishingGuideService;
         }
 
         // Helper field for performing actions on and getting the products list
-        public JsonFileFishingGuideService FishingGuideService { get; }
+        public JsonFileProductService<FishingGuideModel> FishingGuideService { get; }
         // List of all guides
         public IEnumerable<FishingGuideModel> Guides { get; private set; }
 
