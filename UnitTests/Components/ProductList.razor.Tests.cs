@@ -4,7 +4,7 @@ using ContosoCrafts.WebSite.Components;
 using Microsoft.Extensions.DependencyInjection;
 using ContosoCrafts.WebSite.Services;
 using System.Linq;
-
+using ContosoCrafts.WebSite.Models;
 /// <summary>
 /// Bunit tests for components on ProductList razor page
 /// </summary>
@@ -28,7 +28,7 @@ namespace UnitTests.Components
         public void ProductList_Default_Should_Return_Content()
         {
             // Arrange
-            Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
+            Services.AddSingleton<JsonFileProductService<PostModel>>(PageTestsHelper.ProductService);
 
             // Act
             var page = RenderComponent<ProductList>();
@@ -45,7 +45,7 @@ namespace UnitTests.Components
         public void SelectProduct_Valid_ID_Lake_Trout_Should_Return_Content()
         {
             // Arrange
-            Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
+            Services.AddSingleton<JsonFileProductService<PostModel>>(PageTestsHelper.ProductService);
             var id = "MoreInfoButton_Lake Trout";
 
             var page = RenderComponent<ProductList>();
@@ -83,7 +83,7 @@ namespace UnitTests.Components
             */
 
             // Arrange
-            Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
+            Services.AddSingleton<JsonFileProductService<PostModel>>(PageTestsHelper.ProductService);
             var id = "MoreInfoButton_Shark";
 
             var page = RenderComponent<ProductList>();
@@ -155,7 +155,7 @@ namespace UnitTests.Components
             */
 
             // Arrange
-            Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
+            Services.AddSingleton<JsonFileProductService<PostModel>>(PageTestsHelper.ProductService);
             var id = "MoreInfoButton_Lake Trout";
 
             var page = RenderComponent<ProductList>();
@@ -225,7 +225,7 @@ namespace UnitTests.Components
         {
 
             // Arrange
-            Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
+            Services.AddSingleton<JsonFileProductService<PostModel>>(PageTestsHelper.ProductService);
             var id = "CommentButton_Lake Trout";
 
             // id of comment button
@@ -285,7 +285,7 @@ namespace UnitTests.Components
         public void Filter_Search_for_Shark_Should_Return_Content()
         {
             //Arrange
-            Services.AddSingleton<JsonFileProductService>(PageTestsHelper.ProductService);
+            Services.AddSingleton<JsonFileProductService<PostModel>>(PageTestsHelper.ProductService);
             
             // Card Id
             var id = "Shark";
