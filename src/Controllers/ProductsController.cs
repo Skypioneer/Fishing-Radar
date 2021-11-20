@@ -18,13 +18,13 @@ namespace ContosoCrafts.WebSite.Controllers
         /// Initializes the JsonFileProductService field.
         /// </summary>
         /// <param name="productService">A JsonFileProductService instance</param>
-        public ProductsController(JsonFileProductService productService)
+        public ProductsController(JsonFileProductService<PostModel> productService)
         {
             ProductService = productService;
         }
 
         // Field for getting and performing actions on the product list
-        public JsonFileProductService ProductService { get; }
+        public JsonFileProductService<PostModel> ProductService { get; }
 
         /// <summary>
         /// Http Get request
