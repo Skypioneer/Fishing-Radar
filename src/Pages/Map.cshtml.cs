@@ -14,13 +14,13 @@ namespace ContosoCrafts.WebSite.Pages
         /// Initializes the fishing spot service attribute.
         /// </summary>
         /// <param name="fishingSpotService"></param>
-        public MapModel(JsonFileFishingSpotService fishingSpotService)
+        public MapModel(JsonFileProductService<FishingSpotModel> fishingSpotService)
         {
             FishingSpotService = fishingSpotService;
         }
 
         // JSON file processing helper
-        public JsonFileFishingSpotService FishingSpotService { get; }
+        public JsonFileProductService<FishingSpotModel> FishingSpotService { get; }
 
         // Enumerable list of fishing spots from the JSON database
         public IEnumerable<FishingSpotModel> FishingSpots { get; private set; }
