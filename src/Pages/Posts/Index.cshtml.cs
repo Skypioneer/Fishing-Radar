@@ -16,13 +16,13 @@ namespace ContosoCrafts.WebSite.Pages.Posts
         /// Default Constructor
         /// </summary>
         /// <param name="productService"></param>
-        public IndexModel(JsonFileProductService productService)
+        public IndexModel(JsonFileProductService<PostModel> productService)
         {
             ProductService = productService;
         }
 
         // Data Service
-        public JsonFileProductService ProductService { get; }
+        public JsonFileProductService<PostModel> ProductService { get; }
 
         // Collection of the Data
         public IEnumerable<PostModel> Products { get; private set; }
