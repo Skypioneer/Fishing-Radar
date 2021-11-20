@@ -29,6 +29,17 @@ body {
 .white-text {
     color: white;
 }
+
+/*------------------------LOGO CSS-----------------------------*/
+
+.logo {
+    text-align:center;
+    margin: auto;
+    display: block;
+}
+
+/*------------------------LOGO CSS-----------------------------*/
+
 /*-----------------------SEARCH BAR CSS-----------------------*/
 
 .search-box{
