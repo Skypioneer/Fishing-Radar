@@ -1,3 +1,4 @@
+using ContosoCrafts.WebSite.Models;
 using ContosoCrafts.WebSite.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -37,7 +38,9 @@ namespace ContosoCrafts.WebSite
             services.AddServerSideBlazor();
             services.AddHttpClient();
             services.AddControllers();
-            services.AddTransient<JsonFileProductService>();
+            services.AddTransient<JsonFileProductService<PostModel>>();
+            services.AddTransient<JsonFileProductService<FishingSpotModel>>();
+            services.AddTransient<JsonFileProductService<FishingGuideModel>>();
             services.AddTransient<JsonFileFishingSpotService>();
             services.AddTransient<JsonFileFishingGuideService>();
         }
