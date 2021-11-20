@@ -16,6 +16,7 @@ using Moq;
 
 using ContosoCrafts.WebSite.Pages;
 using ContosoCrafts.WebSite.Services;
+using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Pages.Error
 {
@@ -70,9 +71,9 @@ namespace UnitTests.Pages.Error
             mockWebHostEnvironment.Setup(m => m.ContentRootPath).Returns("./data/");
 
             var MockLoggerDirect = Mock.Of<ILogger<ErrorModel>>();
-            JsonFileProductService productService;
+            JsonFileProductService<PostModel> productService;
 
-            productService = new JsonFileProductService(mockWebHostEnvironment.Object);
+            productService = new JsonFileProductService<PostModel>(mockWebHostEnvironment.Object);
 
             pageModel = new ErrorModel(MockLoggerDirect)
             {
