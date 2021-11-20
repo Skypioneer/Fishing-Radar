@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Routing;
 using Moq;
 
 using ContosoCrafts.WebSite.Services;
+using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests
 {
@@ -36,9 +37,9 @@ namespace UnitTests
         public static ViewDataDictionary ViewData;
         public static TempDataDictionary TempData;
         public static PageContext PageContext;
-        public static JsonFileProductService ProductService;
-        public static JsonFileFishingSpotService FishingSpotService;
-        public static JsonFileFishingGuideService FishingGuideService;
+        public static JsonFileProductService<PostModel> ProductService;
+        public static JsonFileProductService<FishingSpotModel> FishingSpotService;
+        public static JsonFileProductService<FishingGuideModel> FishingGuideService;
 
         /// <summary>
         /// Default Constructor
@@ -70,23 +71,23 @@ namespace UnitTests
                 HttpContext = HttpContextDefault
             };
 
-            ProductService = new JsonFileProductService(MockWebHostEnvironment.Object);
+            ProductService = new JsonFileProductService<PostModel>(MockWebHostEnvironment.Object);
 
-            JsonFileProductService productService;
+            JsonFileProductService<PostModel> productService;
 
-            productService = new JsonFileProductService(PageTestsHelper.MockWebHostEnvironment.Object);
+            productService = new JsonFileProductService<PostModel>(PageTestsHelper.MockWebHostEnvironment.Object);
 
-            FishingSpotService = new JsonFileFishingSpotService(MockWebHostEnvironment.Object);
+            FishingSpotService = new JsonFileProductService<FishingSpotModel>(MockWebHostEnvironment.Object);
 
-            JsonFileFishingSpotService fishingSpotService;
+            JsonFileProductService<FishingSpotModel> fishingSpotService;
 
-            fishingSpotService = new JsonFileFishingSpotService(PageTestsHelper.MockWebHostEnvironment.Object);
+            fishingSpotService = new JsonFileProductService<FishingSpotModel>(PageTestsHelper.MockWebHostEnvironment.Object);
 
-            FishingGuideService = new JsonFileFishingGuideService(MockWebHostEnvironment.Object);
+            FishingGuideService = new JsonFileProductService<FishingGuideModel>(MockWebHostEnvironment.Object);
 
-            JsonFileFishingGuideService fishingGuideService;
+            JsonFileProductService<FishingGuideModel> fishingGuideService;
 
-            fishingGuideService = new JsonFileFishingGuideService(PageTestsHelper.MockWebHostEnvironment.Object);
+            fishingGuideService = new JsonFileProductService<FishingGuideModel>(PageTestsHelper.MockWebHostEnvironment.Object);
         }
     }
 }
