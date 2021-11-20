@@ -8,7 +8,7 @@ namespace ContosoCrafts.WebSite.Models
     /// <summary>
     /// Data representation model class for a product.
     /// </summary>
-    public class PostModel
+    public class PostModel : Model
     {
         //Get/Set product ID
         public string Id { get; set; }
@@ -54,7 +54,10 @@ namespace ContosoCrafts.WebSite.Models
         // Store the Comments entered by the users on this product
         public List<CommentModel> CommentList { get; set; } = new List<CommentModel>();
 
+        public string GetFileName() => "products.json";
+
         // Get/set ToString method to get a string representation
         public override string ToString() => JsonSerializer.Serialize<PostModel>(this);
+
     }
 }
