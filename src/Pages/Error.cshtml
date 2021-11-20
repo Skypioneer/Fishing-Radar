@@ -7,9 +7,11 @@
 <h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
 
+<!--Boolean whether or not to show product ID-->
 @if (Model.ShowRequestId)
 {
     <p>
+        <!--Request ID is the id of the product.-->
         <strong>Request ID:</strong> <code>@Model.RequestId</code>
     </p>
 }
