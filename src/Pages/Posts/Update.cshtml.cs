@@ -14,14 +14,14 @@ namespace ContosoCrafts.WebSite.Pages.Posts
     public class UpdateModel : PageModel
     {
         // Data middletier
-        public JsonFileProductService ProductService { get; }
+        public JsonFileProductService<PostModel> ProductService { get; }
 
         /// <summary>
         /// Defualt Construtor
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="productService"></param>
-        public UpdateModel(JsonFileProductService productService)
+        public UpdateModel(JsonFileProductService<PostModel> productService)
         {
             ProductService = productService;
         }
