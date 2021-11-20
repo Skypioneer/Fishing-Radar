@@ -6,7 +6,7 @@ namespace ContosoCrafts.WebSite.Models
     /// Fishing Guide Model class is used to create the fishing guide page
     /// that will allow users to contact local fishing guides and schedule trips.
     /// </summary>
-    public class FishingGuideModel
+    public class FishingGuideModel : Model
     {
         // Get/Set for the fishing Guide ID
         public string Id { get; set; }
@@ -25,5 +25,7 @@ namespace ContosoCrafts.WebSite.Models
 
         // Get/set ToString method to get a string representation
         public override string ToString() => JsonSerializer.Serialize<FishingGuideModel>(this);
+
+        public string GetFileName() => "fishingGuide.json";
     }
 }
