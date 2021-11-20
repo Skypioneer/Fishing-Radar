@@ -14,14 +14,14 @@ namespace ContosoCrafts.WebSite.Pages.Product
     public class DeleteModel : PageModel
     {
         // Data middletier
-        public JsonFileProductService ProductService { get; }
+        public JsonFileProductService<PostModel> ProductService { get; }
 
         /// <summary>
         /// Defualt Construtor
         /// </summary>
         /// <param name="logger"></param>
         /// <param name="productService"></param>
-        public DeleteModel(JsonFileProductService productService)
+        public DeleteModel(JsonFileProductService<PostModel> productService)
         {
             ProductService = productService;
         }
