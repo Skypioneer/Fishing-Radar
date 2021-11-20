@@ -2,6 +2,10 @@
 
 namespace ContosoCrafts.WebSite.Models
 {
+    /// <summary>
+    /// Fishing Guide Model class is used to create the fishing guide page
+    /// that will allow users to contact local fishing guides and schedule trips.
+    /// </summary>
     public class FishingGuideModel
     {
         // Get/Set for the fishing Guide ID
