@@ -26,14 +26,14 @@ namespace ContosoCrafts.WebSite.Pages
         /// <param name="logger"></param>
         /// <param name="productService"></param>
         public IndexModel(ILogger<IndexModel> logger,
-            JsonFileProductService productService)
+            JsonFileProductService<PostModel> productService)
         {
             _logger = logger;
             ProductService = productService;
         }
 
         // Helper field for performing actions on and getting the products list
-        public JsonFileProductService ProductService { get; }
+        public JsonFileProductService<PostModel> ProductService { get; }
         // List of all products
         public IEnumerable<PostModel> Products { get; private set; }
 
