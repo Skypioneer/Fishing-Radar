@@ -1,6 +1,7 @@
 ﻿@page "{id}"
 @using ContosoCrafts.WebSite.Services
-@inject JsonFileProductService ProductService
+@using ContosoCrafts.WebSite.Models
+@inject JsonFileProductService<PostModel> ProductService
 @model ContosoCrafts.WebSite.Pages.Posts.UpdateModel
 
 @{
