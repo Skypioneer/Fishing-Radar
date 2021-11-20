@@ -10,7 +10,7 @@ namespace ContosoCrafts.WebSite.Models
     /// <summary>
     /// Fishing spot model class to represent fishing spot data.
     /// </summary>
-    public class FishingSpotModel
+    public class FishingSpotModel : Model
     {
         // Get/Set for the fishing spot ID
         public string Id { get; set; }
@@ -26,5 +26,7 @@ namespace ContosoCrafts.WebSite.Models
 
         // Get/set ToString method to get a string representation
         public override string ToString() => JsonSerializer.Serialize<FishingSpotModel>(this);
+
+        public string GetFileName() => "fishingSpot.json";
     }
 }
