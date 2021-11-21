@@ -1,4 +1,6 @@
 ﻿@page
+@using ContosoCrafts.WebSite.Models
+@using ContosoCrafts.WebSite.Services
 @model ContosoCrafts.WebSite.Pages.MapModel
 @{
     ViewData["Title"] = "Map";
@@ -28,7 +30,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var fishingSpot in Model.FishingSpots)
+            @foreach (var fishingSpot in Model.FishingSpotList)
             {
                 <tr>
                     <td>@fishingSpot.SpotName</td>
@@ -42,16 +44,33 @@
 
 <br>
 <h3 align="center" class="white-text"><b>Any fishing spots you would like added to the map?</b></h3>
-<form align="center">
+
+<form method="post" align="center">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    @Html.HiddenFor(x => x.FishingSpot.Id)
+
     <div align="center" class="form-group">
-        <input class="form-control" placeholder="Enter Fishing Spot Name">
+        <input asp-for="FishingSpot.SpotName" class="form-control" placeholder="Enter Fishing Spot Name">
+        <span asp-validation-for="FishingSpot.SpotName" class="text-danger"></span>
         <small class="form-text white-text">Any lake or river you enjoy fishing at!</small>
     </div>
+
     <div align="center" class="form-group">
-        <input class="form-control" placeholder="Enter Coordinates (optional)">
+        <input asp-for="FishingSpot.City" class="form-control" placeholder="Enter City">
+        <span asp-validation-for="FishingSpot.City" class="text-danger"></span>
         <small class="form-text white-text">This will help us pinpoint the exact location!</small>
     </div>
-    <button align="center" type="submit" class="btn btn-primary">Submit</button>
+
+    <div align="center" class="form-group">
+        <input asp-for="FishingSpot.Url" class="form-control" placeholder="Enter URL">
+        <span asp-validation-for="FishingSpot.Url" class="text-danger"></span>
+        <small class="form-text white-text">Any useful link with information about the fishing spot!</small>
+    </div>
+
+    <div class="form-group">
+        <input align="center" type="submit" value="Save" class="btn btn-primary" />
+    </div>
+
 </form>
 <br>
 
@@ -66,3 +85,7 @@
 <div align="center">
     <iframe src="https://www.google.com/maps/d/embed?mid=16GZE58hCdKqXPaNoh2jril2O6PnPm1N7" width="640" height="480"></iframe>
 </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
