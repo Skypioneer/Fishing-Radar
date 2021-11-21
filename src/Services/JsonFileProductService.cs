@@ -123,7 +123,7 @@ namespace ContosoCrafts.WebSite.Services
             postData.CommentList = data.CommentList;
 
             // save changes to Json file
-            SaveData(posts);
+            SaveData((IEnumerable<T>)posts);
 
             return postData;
         }
@@ -131,12 +131,12 @@ namespace ContosoCrafts.WebSite.Services
         /// <summary>
         /// Save All products data to storage
         /// </summary>
-        private void SaveData(IEnumerable<PostModel> products)
+        private void SaveData(IEnumerable<T> products)
         {
             // write changes to Json file
             using (var outputStream = File.Create(JsonFileName))
             {
-                JsonSerializer.Serialize<IEnumerable<PostModel>>(
+                JsonSerializer.Serialize<IEnumerable<T>>(
                     new Utf8JsonWriter(outputStream, new JsonWriterOptions
                     {
                         SkipValidation = true,
@@ -153,10 +153,10 @@ namespace ContosoCrafts.WebSite.Services
         /// </summary>
         /// <param name="data">The product to add to the JSON dataset</param>
         /// <returns></returns>
-        public PostModel CreateData(PostModel data)
+        public T CreateData(T data)
         {
             // Get the current set, and append the new record to it becuase IEnumerable does not have Add
-            var dataSet = GetAllData() as IEnumerable<PostModel>;
+            var dataSet = GetAllData();
             dataSet = dataSet.Append(data);
 
             SaveData(dataSet);
@@ -181,7 +181,7 @@ namespace ContosoCrafts.WebSite.Services
             newDataSet = newDataSet.Where(m => m.Id.Equals(id) == false);
 
             // save changes to dataset
-            SaveData(newDataSet);
+            SaveData((IEnumerable<T>)newDataSet);
 
             return data;
         }
