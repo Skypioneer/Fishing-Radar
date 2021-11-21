@@ -53,7 +53,7 @@ namespace UnitTests.Pages
         /// </summary>
         #region OnGet
         [Test]
-        public void OnGet_Valid_Request_Should_Return_Fishing_Spots()
+        public void OnGet_Valid_Request_Should_Return_Fishing_Spot_List()
         {
             // Arrange
 
@@ -63,6 +63,25 @@ namespace UnitTests.Pages
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
             Assert.AreEqual(true, pageModel.FishingSpotList.ToList().Any());
+        }
+
+        /// <summary>
+        /// OnGet test for REST Get request
+        /// Checks if the model state is valid and if FishingSpot is initialized
+        /// to a non-null state.
+        /// </summary>
+        [Test]
+        public void OnGet_Valid_Request_Should_Return_Fishing_Spot()
+        {
+            // Arrange
+
+            // Act
+            pageModel.OnGet();
+            var result = pageModel.FishingSpot;
+
+            // Assert
+            Assert.AreEqual(true, pageModel.ModelState.IsValid);
+            Assert.AreEqual(false, result == null);
         }
 
         #endregion OnGet
