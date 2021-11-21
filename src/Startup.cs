@@ -41,8 +41,6 @@ namespace ContosoCrafts.WebSite
             services.AddTransient<JsonFileProductService<PostModel>>();
             services.AddTransient<JsonFileProductService<FishingSpotModel>>();
             services.AddTransient<JsonFileProductService<FishingGuideModel>>();
-            services.AddTransient<JsonFileFishingSpotService>();
-            services.AddTransient<JsonFileFishingGuideService>();
         }
 
         /// <summary>
