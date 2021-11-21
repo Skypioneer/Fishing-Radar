@@ -62,7 +62,7 @@ namespace UnitTests.Pages
 
             // Assert
             Assert.AreEqual(true, pageModel.ModelState.IsValid);
-            Assert.AreEqual(true, pageModel.FishingSpots.ToList().Any());
+            Assert.AreEqual(true, pageModel.FishingSpotList.ToList().Any());
         }
 
         #endregion OnGet
