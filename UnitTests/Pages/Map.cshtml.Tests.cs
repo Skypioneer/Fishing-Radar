@@ -86,5 +86,48 @@ namespace UnitTests.Pages
 
         #endregion OnGet
 
+        #region OnPost
+
+
+        /// <summary>
+        /// Testing OnPost function with an Invalid FishingSpot ID
+        /// The model state should then be invalid
+        /// </summary>
+        [Test]
+        public void OnPost_Invalid_Page_Not_Valid_Return_Page()
+        {
+            // Arrange
+
+            // Force an invalid error state
+            pageModel.ModelState.AddModelError("bogus", "bogus error");
+
+            // Act
+            var result = pageModel.OnPost() as ActionResult;
+
+            // Assert
+            Assert.AreEqual(false, pageModel.ModelState.IsValid);
+        }
+
+        /// <summary>
+        /// OnPost test method: tests if newly created fishing spot is saved to the 
+        /// JSON file after calling OnPost
+        /// </summary>
+        [Test]
+        public void OnPost_Valid_Should_Save_Created_Data_To_Json()
+        {
+            // Arrange
+            pageModel.OnGet();
+            var data = pageModel.FishingSpot;
+
+            // Act
+            pageModel.OnPost();
+            var result = PageTestsHelper.FishingSpotService.GetAllData().First(x => x.Id == data.Id);
+
+            // Assert
+            Assert.AreEqual(data.Id, result.Id);
+        }
+
+        #endregion OnPost
+
     }
 }
