@@ -2,29 +2,43 @@
   {
     "Id": "000001",
     "Name": "Mark Taylor",
-    "PhoneNumber": "5555555555",
+    "PhoneNumber": "298-281-2373",
     "FishingTarget": "Shark",
     "Price":  "100USD/Hr with gas/tackles/live bait included"
   },
   {
     "Id": "000002",
     "Name": "Francis kogge",
-    "PhoneNumber": "6666666666",
+    "PhoneNumber": "918-283-6479",
     "FishingTarget": "Salmon",
     "Price": "80USD/Hr with gas/tackles/live bait included"
   },
   {
     "Id": "000003",
     "Name": "Jason Wang",
-    "PhoneNumber": "7777777777",
+    "PhoneNumber": "762-483-4729",
     "FishingTarget": "Trout",
-    "Price": "50USD/Hr with gas/tackles/live bait included"
+    "Price": "200USD for 3 hrs trip with gas/tackles/live bait included."
   },
   {
     "Id": "000004",
     "Name": "William Zhong",
-    "PhoneNumber": "8888888888",
+    "PhoneNumber": "512-746-4738",
     "FishingTarget": "Flounder",
-    "Price": "50USD/Hr with gas/tackles/live bait/beverages included"
+    "Price": "50USD/Hr with gas/tackles/live bait/beverages included."
+  },
+  {
+    "Id": "000005",
+    "Name": "Captain Mike",
+    "PhoneNumber": "520-777-8723",
+    "FishingTarget": "Bass",
+    "Price": "600USD(8hrs) full day trip with gas/tackles/live bait/beverages included, 400 USD for half day(4 hrs)."
+  },
+  {
+    "Id": "000006",
+    "Name": "Captain Tom",
+    "PhoneNumber": "4520-794-2729",
+    "FishingTarget": "Grouper",
+    "Price": "800USD for 4 hr trip, bring your own tackles. gas/bait included."
   }
 ]
