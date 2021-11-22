@@ -96,7 +96,7 @@ namespace UnitTests.Services
         public void UpdateData_Valid_Data_Exists_Should_Return_Updated_Data()
         {
             // Arrange
-            var data = PageTestsHelper.ProductService.GetAllData().First(x => x.Id == "fly fishing");
+            var data = PageTestsHelper.ProductService.GetAllData().First(x => x.Id == "Salmon Fishing");
 
             // Change all attributes that can be updated in UpdateData
             data.Title = "new title";
