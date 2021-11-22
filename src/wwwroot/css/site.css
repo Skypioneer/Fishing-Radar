@@ -447,6 +447,27 @@ ul {
     opacity: 0.8;*/
 }
 
+.guide-container {
+    overflow: hidden;
+    text-align: center;
+    background: #34495e;
+    padding: 60px;
+}
+
+.post-container {
+    overflow: hidden;
+    text-align: center;
+    background: #34495e;
+    padding: 60px;
+}
+
+
+.map-container {
+    overflow: hidden;
+    text-align: center;
+    background: #34495e;
+    padding: 60px;
+}
 
 /*ABOUT PAGE CSS*/
 .team-section {
