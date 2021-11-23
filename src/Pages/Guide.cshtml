@@ -19,6 +19,7 @@
                 <th><i class="fas fa-phonenumber"></i>Phone Number</th>
                 <th><i class="fas fa-target"></i>Target Fish</th>
                 <th><i class="fas fa-price"></i>Price</th>
+                <th><i class="fas fa-date"></i>Available Date</th>
             </tr>
         </thead>
         <tbody>
@@ -29,8 +30,27 @@
                     <td>@guide.PhoneNumber</td>
                     <td>@guide.FishingTarget</td>
                     <td>@guide.Price</td>
+                    <td>
+                        <input id="Available_Date" size="60" type="date" format="MM/DD/YYYY" placeholder="MM/DD/YYYY" />
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
+
+@section Scripts {
+    <script>
+        const picker = document.getElementById('Available_Date');
+        picker.addEventListener('input', function(e){
+            var day = new Date(this.value).getUTCDay();
+            if ([6, 0].includes(day)) {
+                e.preventDefault();
+                this.value = '';
+                alert('Weekends is not available.');
+            } else {
+                alert('The date is currently available.');
+            }
+        });
+    </script>
+}
