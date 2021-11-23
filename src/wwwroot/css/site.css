@@ -74,6 +74,10 @@ body {
     transition: 0.4s;
 }
 
+.search-icon {
+    color: navy;
+}
+
 .search-text {
     border: none;
     background: none;
