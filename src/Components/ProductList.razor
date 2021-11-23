@@ -9,7 +9,8 @@
             <input id="SearchBar" class="search-text" type="text" @onchange="(e) => UpdateFilterText(e.Value.ToString())"
                    value="@FilterDataString" name="" placeholder="Search Posts">
 
-            <a id ="FilterButton" class="search-btn" @onclick="(e => EnableFilterData())" href="#"> </a>
+
+            <a id="FilterButton" class="search-btn" @onclick="(e => EnableFilterData())" href="#"> <i class="search-icon fas fa-search"></i></a>
         </div>
     </div>
 </div>
