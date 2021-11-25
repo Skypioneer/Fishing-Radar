@@ -68,10 +68,7 @@ namespace ContosoCrafts.WebSite.Pages
         {
             return new FishingSpotModel()
             {
-                Id = System.Guid.NewGuid().ToString(),
-                SpotName = "Enter Spot Name",
-                City = "Enter City",
-                Url = "Enter URL"
+                Id = System.Guid.NewGuid().ToString()
             };
         }
     }
