@@ -34,6 +34,10 @@ namespace ContosoCrafts.WebSite.Models
         // Get/set ToString method to get a string representation
         public override string ToString() => JsonSerializer.Serialize<FishingSpotModel>(this);
 
+        /// <summary>
+        /// Retrieve the filename for the fishing spot JSON data file.
+        /// </summary>
+        /// <returns>File name</returns>        
         public string GetFileName() => "fishingSpot.json";
     }
 }
