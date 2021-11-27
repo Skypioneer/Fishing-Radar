@@ -5,11 +5,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace UnitTests.Pages.Posts.Read
 {
-    public class Read
+    /// <summary>
+    /// Testing the ReadModel class for the read function of CRUDi.
+    /// </summary>
+    public class ReadTests
     {
         #region TestSetup
         public static ReadModel pageModel;
 
+        /// <summary>
+        /// Initiailize a ReadModel for testing.
+        /// </summary>
         [SetUp]
         public void TestInitialize()
         {
