@@ -8,11 +8,11 @@
 
 <h1 class="white-text">@ViewData["Title"]</h1>
 <br>
-<h3 align="center" class="white-text">1. Browse our favorite spots to fish!</h3>
+<h3 class="white-text map-text">1. Browse our favorite spots to fish!</h3>
 <br>
 <br>
 
-<div align="center">
+<div class="map-text">
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1CidasMCwKj785kQVDi1EZOETwwd1xa8w" width="700" height="480"></iframe>
 </div>
 
@@ -43,32 +43,32 @@
 </div>
 
 <br>
-<h3 align="center" class="white-text"><b>Any fishing spots you would like added to the map?</b></h3>
+<h3 class="white-text map-text"><b>Any fishing spots you would like added to the map?</b></h3>
 
-<form method="post" align="center">
+<form method="post" class="map-text">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     @Html.HiddenFor(x => x.FishingSpot.Id)
 
-    <div align="center" class="form-group">
+    <div class="form-group map-text">
         <input asp-for="FishingSpot.SpotName" class="form-control" placeholder="Enter Fishing Spot Name">
         <span asp-validation-for="FishingSpot.SpotName" class="text-danger"></span>
         <small class="form-text white-text">Any lake or river you enjoy fishing at!</small>
     </div>
 
-    <div align="center" class="form-group">
+    <div class="form-group map-text">
         <input asp-for="FishingSpot.City" class="form-control" placeholder="Enter City">
         <span asp-validation-for="FishingSpot.City" class="text-danger"></span>
         <small class="form-text white-text">This will help us pinpoint the exact location!</small>
     </div>
 
-    <div align="center" class="form-group">
+    <div class="form-group map-text">
         <input asp-for="FishingSpot.Url" class="form-control" placeholder="Enter URL">
         <span asp-validation-for="FishingSpot.Url" class="text-danger"></span>
         <small class="form-text white-text">Any useful link with information about the fishing spot!</small>
     </div>
 
     <div class="form-group">
-        <input align="center" type="submit" value="Save" class="btn btn-primary" />
+        <input type="submit" value="Save" class="map-text btn-primary" />
     </div>
 
 </form>
@@ -79,10 +79,10 @@
 <br>
 <br>
 <br>
-<h3 align="center" class="white-text">2. Browse the best Fishing tackle & supply store around Seattle Area</h3>
+<h3 class="white-text map-text">2. Browse the best Fishing tackle & supply store around Seattle Area</h3>
 <br>
 <br>
-<div align="center">
+<div class="map-text">
     <iframe src="https://www.google.com/maps/d/embed?mid=16GZE58hCdKqXPaNoh2jril2O6PnPm1N7" width="640" height="480"></iframe>
 </div>
 
