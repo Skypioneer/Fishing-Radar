@@ -3,6 +3,8 @@
 @using Microsoft.AspNetCore.Components.Web
 @inject JsonFileProductService<PostModel> ProductService
 
+
+
 <div class="row">
     <div class="col">
         <div class="search-box">
@@ -48,6 +50,19 @@
                                 data-toggle="modal" data-target="#productCommentModel" id="CommentButton_@product.Id" class="btn btn-primary">
                             Comment
                         </button>
+                    </small>
+
+                    <small class="text-muted">
+
+                        <div class="fb-share-button" data-href="https://www.facebook.com/" data-layout="button" data-size="large">
+                            <a 
+                               target="_blank" 
+                               href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2F&amp;src=sdkpreparse"
+                               class="fb-xfbml-parse-ignore">
+                                Share
+                            </a>
+                        </div>
+
                     </small>
                 </div>
             </div>
