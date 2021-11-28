@@ -25,7 +25,7 @@
         // If filter is enabled, reduce the data set to the filter string
         if (FilterData)
         {
-            productList = productList.Where(m => m.Title.Contains(FilterDataString));
+            productList = productList.Where(m => m.Title.Contains(FilterDataString, StringComparison.OrdinalIgnoreCase));
         }
 
 
