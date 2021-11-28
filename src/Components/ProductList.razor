@@ -68,10 +68,21 @@
                         <span aria-hidden="true" class="black-text">&times;</span>
                     </button>
                 </div>
+
                 <div class="modal-body">
                     <div class="card">
                         <div class="card-img" style="background-image: url('@selectedProduct.Image');">
                         </div>
+
+                        <div class=" card-body" data-href="https://www.facebook.com/" data-layout="button" data-size="large">
+                            <a target="_blank"
+                               href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2F&amp;src=sdkpreparse"
+                               class="fb-xfbml-parse-ignore">
+
+                                Share on Facebook
+                            </a>
+                        </div>
+
                         <div class="card-body">
                             <p class="card-text black-text">@selectedProduct.Description</p>
                         </div>
@@ -87,6 +98,7 @@
                         <div class="card-body">
                             <p class="card-text black-text">Water Temperature: @selectedProduct.WaterTemp</p>
                         </div>
+
                     </div>
                 </div>
                 <div class="modal-footer">
