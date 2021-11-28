@@ -11,7 +11,7 @@ using ContosoCrafts.WebSite.Models;
 namespace UnitTests.Components
 {
     /// <summary>
-    /// Bunit test class for ProductLists unit tests
+    /// Unit test class for ProductLists.razor
     /// </summary>
     public class ProductListTests : BunitTestContext
     {
