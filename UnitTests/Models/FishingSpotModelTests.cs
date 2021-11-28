@@ -8,6 +8,9 @@ using NUnit.Framework;
 
 namespace UnitTests.Models
 {
+    /// <summary>
+    /// Testing the FishingSpotModel class for prepresenting fishing spot data
+    /// </summary>
     class FishingSpotModelTests
     {
         #region TestSetup
