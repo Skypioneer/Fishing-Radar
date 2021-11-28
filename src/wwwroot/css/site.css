@@ -93,128 +93,7 @@ body {
 
 
 /*-----------------------END OF SEARCH BAR CSS----------------*/
-/*------- CSS for image gallery layout ---------------*/
-.image-gallery {
-    width: 100%;
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 50px 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 250px;
-    grid-auto-flow: dense;
-    grid-gap: 20px;
-}
 
-.image-gallery .image-box {
-    position: relative;
-    background-color: #d7d7d8;
-    overflow: hidden;
-}
-
-.image-gallery .image-box:nth-child(7n+1) {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.image-gallery .image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.5s ease;
-}
-
-/*Hoovering over image increases size*/
-.image-gallery .image-box:hover img {
-    transform: scale(1.1);
-}
-
-/*Creates an overlay when over the items
-    provides a title and description
-*/
-.image-gallery .image-box .overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #fafafaf2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: all .5s ease;
-    z-index: 1;
-}
-
-/*When mouse is over images overlay is displayed*/
-.image-gallery .image-box:hover .overlay {
-    top: 20px;
-    right: 20px;
-    bottom: 20px;
-    left: 20px;
-    opacity: 1;
-}
-
-.image-gallery .image-box .details {
-    text-align: center
-}
-
-.image-gallery .image-box .details .title {
-    margin-bottom: 8px;
-    font-size: 24px;
-    font-weight: 600;
-    position: relative;
-    top: -5px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.image-gallery .image-box .details .category {
-    font-size: 18px;
-    font-weight: 400;
-    position: relative;
-    top: -5px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-}
-
-.image-gallery .image-box:hover .details .title {
-    top: 0px;
-    opacity: 1;
-    visibility: visible;
-    transition all 0.3s ease;
-}
-
-.image-gallery .image-box:hover .details .category {
-    bottom: 0px;
-    opacity: 1;
-    visibility: visible;
-    transition all 0.3s ease;
-}
-
-.image-gallery .image-box .details .title a,
-.image-gallery .image-box .details .category a{
-    color: #252152;
-    text-decoration: none
-}
-
-/*add responsiveness to gallery*/
-/*change image scale based on the screen real estate*/
-@media(max-width:768px){
-    .image-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-auto-rows: 250px;
-    }
-    .image-gallery .image-box:nth-child(7n+1) {
-        grid-column: unset;
-        grid-row: unset;
-    }
-}
-
-/*------- CSS for image gallery layout ---------------*/
 
 
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
@@ -421,13 +300,6 @@ ul {
     background: -moz-linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
     background: linear-gradient(110deg, #e9a8a6 60%, #252152 60%);
     opacity: 0.8;
-}
-.bg-footer {
-/*    background: -webkit-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
-    background: -o-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
-    background: -moz-linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
-    background: linear-gradient(110deg, #252152 60%, #e9a8a6 60%);
-    opacity: 0.8;*/
 }
 
 .guide-container {
