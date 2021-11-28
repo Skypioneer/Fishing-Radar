@@ -8,6 +8,10 @@ using NUnit.Framework;
 
 namespace UnitTests.Models
 {
+    /// <summary>
+    /// Testing the FishingGuideModel class for create the fishing guide page
+    /// that will allow users to contact local fishing guides and schedule trips.
+    /// </summary>
     class FishingGuideModelTests
     {
         #region TestSetup
