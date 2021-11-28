@@ -401,19 +401,23 @@ ul {
 .upload-btn {
     font-size: 20px;
     font-weight: 700;
-    color: white;
-    background-color: mediumseagreen;
+    
+    color: #fff;
+    background-color: #6495ED;
+    border-color: #6495ED;
+
     border-radius: 20px;
     display: inline-block;
     margin-top: 1.5%;
-    margin-bottom:1.5%;
+    margin-bottom: 1.5%;
 }
 
 .upload-btn:hover {
-    color: mediumseagreen;
-    background-color: white;
-    border-color: white;
+        color: #fff;
+        background-color: #0366d6;
+        border-color: #0366d6;
 }
+
 /*End of Upload Post Button*/
 
 /*MAP Link*/
