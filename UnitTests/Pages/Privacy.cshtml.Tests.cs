@@ -20,6 +20,9 @@ using ContosoCrafts.WebSite.Models;
 
 namespace UnitTests.Pages.Privacy
 {
+    /// <summary>
+    /// Unit test class for Privacy.cshtml.cs
+    /// </summary>
     public class PrivacyTests
     {
         /// <summary>
