@@ -17,6 +17,7 @@ namespace ContosoCrafts.WebSite.Pages
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
+        // Performs logging
         private readonly ILogger<ErrorModel> _logger;
 
         /// <summary>
