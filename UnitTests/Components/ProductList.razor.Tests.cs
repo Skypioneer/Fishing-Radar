@@ -5,13 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 using ContosoCrafts.WebSite.Services;
 using System.Linq;
 using ContosoCrafts.WebSite.Models;
-/// <summary>
-/// Bunit tests for components on ProductList razor page
-/// </summary>
+
 namespace UnitTests.Components
 {
     /// <summary>
-    /// Unit test class for ProductLists.razor
+    /// BUnit test class for ProductLists.razor
     /// </summary>
     public class ProductListTests : BunitTestContext
     {
@@ -24,6 +22,9 @@ namespace UnitTests.Components
 
         #endregion TestSetup
 
+        /// <summary>
+        /// Tests that the product list is rendered and list contents are returned.
+        /// </summary>
         [Test]
         public void ProductList_Default_Should_Return_Content()
         {
@@ -41,6 +42,10 @@ namespace UnitTests.Components
         }
 
         #region SelectProduct
+        /// <summary>
+        /// Tests that selecting product with a valid ID should return a valid post and render all
+        /// of its content.
+        /// </summary>
         [Test]
         public void SelectProduct_Valid_ID_Lake_Trout_Should_Return_Content()
         {
@@ -68,20 +73,18 @@ namespace UnitTests.Components
         #endregion SelectProduct
 
         #region SubmitRating
-
+        /// <summary>
+        /// This test tests that the SubmitRating will change the vote as well as the Star checked
+        /// Because the star check is a calculation of the ratings, using a record that has no stars and checking one makes it clear what was changed
+        /// The test needs to open the page
+        /// Then open the popup on the card
+        /// Then record the state of the count and star check status
+        /// Then check a star
+        /// Then check again the state of the cound and star check status
+        /// </summary>
         [Test]
         public void SubmitRating_Valid_ID_Click_Unstared_Should_Increment_Count_And_Check_Star()
         {
-            /*
-             This test tests that the SubmitRating will change the vote as well as the Star checked
-             Because the star check is a calculation of the ratings, using a record that has no stars and checking one makes it clear what was changed
-            The test needs to open the page
-            Then open the popup on the card
-            Then record the state of the count and star check status
-            Then check a star
-            Then check again the state of the cound and star check status
-            */
-
             // Arrange
             Services.AddSingleton<JsonFileProductService<PostModel>>(PageTestsHelper.ProductService);
             var id = "MoreInfoButton_Shark";
@@ -144,19 +147,18 @@ namespace UnitTests.Components
             Assert.AreEqual(false, preVoteCountString.Equals(postVoteCountString));
         }
 
+        /// <summary>
+        /// This test tests that the SubmitRating will change the vote as well as the Star checked
+        /// Because the star check is a calculation of the ratings, using a record that has no stars and checking one makes it clear what was changed
+        /// The test needs to open the page
+        /// Then open the popup on the card
+        /// Then record the state of the count and star check status
+        /// Then check a star
+        /// Then check again the state of the cound and star check status
+        /// </summary>
         [Test]
         public void SubmitRating_Valid_ID_Click_Stared_Should_Increment_Count_And_Leave_Star_Check_Remaining()
         {
-            /*
-             This test tests that the SubmitRating will change the vote as well as the Star checked
-             Because the star check is a calculation of the ratings, using a record that has no stars and checking one makes it clear what was changed
-            The test needs to open the page
-            Then open the popup on the card
-            Then record the state of the count and star check status
-            Then check a star
-            Then check again the state of the cound and star check status
-            */
-
             // Arrange
             Services.AddSingleton<JsonFileProductService<PostModel>>(PageTestsHelper.ProductService);
             var id = "MoreInfoButton_Lake Trout";
@@ -220,10 +222,11 @@ namespace UnitTests.Components
 
         #region UpdateCommentText
         [Test]
-
+        /// <summary>
         /// Unit test will take a card and add a new comment by searching the page for its
         /// buttons and then clicking them. It then creates a test comment that should be able
         /// to be seen by the unit test.
+        /// </summary>
         public void UpdateCommentText_New_Comment_Should_Return_Content()
         {
 
@@ -280,11 +283,11 @@ namespace UnitTests.Components
 
         #region Filter
         [Test]
-        ///
+        /// <summary>
         /// Unit test to check that we can successfully filter our cards by product ids.
         /// Unit test should return just a single card called shark and it tries to search
         /// for another card but can find it because it doesn't reference shark,
-        ///
+        /// </summary>
         public void Filter_Search_for_Shark_Should_Return_Content()
         {
             //Arrange
