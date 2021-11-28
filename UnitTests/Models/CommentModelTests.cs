@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace UnitTests.Models
 {
+    /// <summary>
+    /// Testing the ConnentModels class for creating comments on individual cards.
+    /// </summary>
     class CommentModelTests
     {
         #region TestSetup
