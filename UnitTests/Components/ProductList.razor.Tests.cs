@@ -107,7 +107,9 @@ namespace UnitTests.Components
             var preVoteCountString = preVoteCountSpan.OuterHtml;
 
             // Get the First star item from the list, it should not be checked
-            var starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star"));
+            var starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName));
+            starButton = starButtonList.First(m => m.ClassName.Contains("fa fa-star"));
+
 
             // Save the html for it to compare after the click
             var preStarChange = starButton.OuterHtml;
@@ -128,7 +130,8 @@ namespace UnitTests.Components
             var postVoteCountString = postVoteCountSpan.OuterHtml;
 
             // Get the Last stared item from the list
-            starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star checked"));
+            starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName));
+            starButton = starButtonList.First(m => m.ClassName.Contains("fa fa-star checked"));
 
             // Save the html for it to compare after the click
             var postStarChange = starButton.OuterHtml;
