@@ -13,8 +13,10 @@ namespace ContosoCrafts.WebSite.Pages
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public class ErrorModel : PageModel
     {
+        // The Id to show, bind to it for the post
         public string RequestId { get; set; }
 
+        // check if the Id existed in the list
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
         // Performs logging
