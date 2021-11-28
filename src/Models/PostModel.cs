@@ -10,9 +10,11 @@ namespace ContosoCrafts.WebSite.Models
     /// </summary>
     public class PostModel : Model
     {
+        [StringLength(maximumLength: 50, MinimumLength = 1, ErrorMessage = "The Title should have a length of more than {2} and less than {1}")]
         //Get/Set product ID
         public string Id { get; set; }
 
+        [StringLength(maximumLength: 20, MinimumLength = 1, ErrorMessage = "The Title should have a length of more than {2} and less than {1}")]
         //Get/set the maker of said product
         public string Maker { get; set; }
 
@@ -32,6 +34,7 @@ namespace ContosoCrafts.WebSite.Models
         //Get/set Description for a product
         public string Description { get; set; }
 
+        [RegularExpression("0-9")]
         // Get/set list of ratings for a producrt
         public int[] Ratings { get; set; }
 
@@ -44,6 +47,7 @@ namespace ContosoCrafts.WebSite.Models
         //Get/set the date when the fish was caught
         public string Date { get; set; }
 
+        [Range(14.0, 95.0)]
         //Get/set the water temperature when the fish was caught
         public int WaterTemp { get; set; }
 
