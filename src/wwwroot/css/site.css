@@ -7,7 +7,7 @@
 }
 
 /*CSS for side nav bar--------------------*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -143,6 +143,10 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 .card-footer {
     background: #fbfafd;
+}
+
+.card-ratings {
+    padding: 20px;
 }
 
 .comment-h3 {
