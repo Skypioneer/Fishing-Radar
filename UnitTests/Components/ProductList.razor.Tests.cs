@@ -111,7 +111,7 @@ namespace UnitTests.Components
 
             // Get the First star item from the list, it should not be checked
             var starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName));
-            starButton = starButtonList.First(m => m.ClassName.Contains("fa fa-star"));
+            starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star"));
 
 
             // Save the html for it to compare after the click
@@ -134,7 +134,7 @@ namespace UnitTests.Components
 
             // Get the Last stared item from the list
             starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName));
-            starButton = starButtonList.First(m => m.ClassName.Contains("fa fa-star checked"));
+            starButton = starButtonList.First(m => !string.IsNullOrEmpty(m.ClassName) && m.ClassName.Contains("fa fa-star checked"));
 
             // Save the html for it to compare after the click
             var postStarChange = starButton.OuterHtml;
@@ -213,8 +213,8 @@ namespace UnitTests.Components
             // Assert
 
             // Confirm that the record had no votes to start, and 1 vote after
-            Assert.AreEqual(true, preVoteCountString.Contains("6 Votes"));
-            Assert.AreEqual(true, postVoteCountString.Contains("7 Votes"));
+            Assert.AreEqual(true, preVoteCountString.Contains("11 Votes"));
+            Assert.AreEqual(true, postVoteCountString.Contains("12 Votes"));
             Assert.AreEqual(false, preVoteCountString.Equals(postVoteCountString));
         }
         #endregion SubmitRating
