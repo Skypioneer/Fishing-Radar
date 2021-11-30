@@ -58,6 +58,10 @@ namespace ContosoCrafts.WebSite.Models
         // Store the Comments entered by the users on this product
         public List<CommentModel> CommentList { get; set; } = new List<CommentModel>();
 
+        /// <summary>
+        /// Retrieve the filename for the fishing spot JSON data file.
+        /// </summary>
+        /// <returns>File name</returns> 
         public string GetFileName() => "products.json";
 
         // Get/set ToString method to get a string representation
