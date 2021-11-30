@@ -234,7 +234,7 @@
 
     void GetCurrentRating()
     {
-        if (selectedProduct.Ratings == null)
+        if (selectedProduct.Ratings.Length == 0)
         {
             currentRating = 0;
             voteCount = 0;
@@ -243,13 +243,7 @@
         {
             voteCount = selectedProduct.Ratings.Count();
             voteLabel = voteCount > 1 ? "Votes" : "Vote";
-            if(voteCount == 0)
-            {
-                currentRating = 0;
-            } else
-            {
-                currentRating = selectedProduct.Ratings.Sum() / voteCount;
-            }
+            currentRating = selectedProduct.Ratings.Sum() / voteCount;
         }
 
         System.Console.WriteLine($"Current rating for {selectedProduct.Id}: {currentRating}");
