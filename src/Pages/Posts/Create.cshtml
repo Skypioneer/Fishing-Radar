@@ -8,9 +8,9 @@
     ViewData["Title"] = "Create page";
 }
 
-<h1>Upload Post</h1>
+<h1 class="white-text">Upload Post</h1>
 
-<div class="container">
+<div class="container white-text">
     <form method="post">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @Html.HiddenFor(x => x.Product.Id)
