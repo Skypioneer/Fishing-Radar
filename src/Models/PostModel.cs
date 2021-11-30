@@ -34,7 +34,6 @@ namespace ContosoCrafts.WebSite.Models
         //Get/set Description for a product
         public string Description { get; set; }
 
-        [RegularExpression("0-9")]
         // Get/set list of ratings for a producrt
         public int[] Ratings { get; set; }
 
@@ -47,7 +46,6 @@ namespace ContosoCrafts.WebSite.Models
         //Get/set the date when the fish was caught
         public string Date { get; set; }
 
-        [Range(14.0, 95.0)]
         //Get/set the water temperature when the fish was caught
         public int WaterTemp { get; set; }
 
